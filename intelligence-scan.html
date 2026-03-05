@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Intelligence Scan | Skyco Web Agency</title>
+    <meta name="description" content="Free audit of your digital infrastructure performance, security, and SEO.">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#3211d4", "background-dark": "#0a0910" }, fontFamily: { "display": ["Manrope", "sans-serif"] } } } }
+    </script>
+</head>
+
+<body class="bg-background-dark font-display text-slate-100 min-h-screen selection:bg-primary selection:text-white">
+    <div class="relative min-h-screen overflow-x-hidden">
+
+        <!-- Nav -->
+        <nav class="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 py-4">
+            <div class="max-w-7xl mx-auto flex items-center justify-between glass rounded-full px-6 md:px-8 py-3">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="text-primary"><span class="material-symbols-outlined text-3xl">deployed_code</span>
+                    </div><span class="text-xl font-extrabold tracking-tighter uppercase italic">Skyco</span>
+                </a>
+                <div class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html"
+                        data-i18n="nav.home">Home</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="niches.html"
+                        data-i18n="nav.niches">Niches</a>
+                    <a class="text-sm font-medium text-primary" href="intelligence-scan.html"
+                        data-i18n="nav.scan">Intelligence Scan</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="enterprise.html"
+                        data-i18n="nav.enterprise">Enterprise</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="lang-toggle hidden sm:inline-flex"><button class="lang-btn active"
+                            data-lang="en">EN</button><button class="lang-btn" data-lang="nl">NL</button></div>
+                    <a href="contact.html"
+                        class="text-sm font-semibold hover:text-primary transition-colors hidden md:block"
+                        data-i18n="nav.contact">Contact</a>
+                    <a href="aanvraag.html"
+                        class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-full text-sm font-bold transition-all shadow-lg shadow-primary/20"
+                        data-i18n="nav.cta">Launch Console</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="pt-32 md:pt-40 pb-16 px-6 hero-gradient">
+            <div class="max-w-7xl mx-auto text-center reveal">
+                <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-4" data-i18n="scan.title">Free Intelligence
+                    Scan</h1>
+                <p class="text-lg text-slate-400 max-w-2xl mx-auto" data-i18n="scan.sub">Internal audit of digital
+                    infrastructure performance and security. Discover vulnerabilities before they cost you.</p>
+            </div>
+        </section>
+
+        <!-- Dashboard -->
+        <section class="pb-24 px-6">
+            <div class="max-w-5xl mx-auto">
+
+                <!-- Score + Metrics Row -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                    <!-- Audit Score -->
+                    <div class="glass rounded-2xl p-8 flex flex-col items-center justify-center reveal">
+                        <span class="text-xs text-slate-500 uppercase font-bold tracking-wider mb-6"
+                            data-i18n="scan.score">Overall Audit Score</span>
+                        <div class="relative w-36 h-36 mb-4">
+                            <svg viewBox="0 0 100 100" class="w-full h-full -rotate-90">
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(255,255,255,0.05)"
+                                    stroke-width="8" />
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="#3211d4" stroke-width="8"
+                                    class="gauge-ring glow-pulse" stroke-dashoffset="42.4" />
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span class="text-5xl font-black" data-count="94" data-suffix="">0</span>
+                                <span class="text-xs text-slate-500">/ 100</span>
+                            </div>
+                        </div>
+                        <span class="text-green-500 text-xs font-bold flex items-center gap-1"><span
+                                class="material-symbols-outlined text-sm">check_circle</span> <span
+                                data-i18n="scan.excellent">Excellent Performance</span></span>
+                    </div>
+                    <!-- Performance -->
+                    <div class="glass rounded-2xl p-6 flex flex-col gap-3 reveal reveal-d1">
+                        <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center"><span
+                                class="text-primary text-xs font-bold">-3ms</span></div>
+                        <span class="text-xs text-slate-500 uppercase font-bold"
+                            data-i18n="scan.perf">Performance</span>
+                        <span class="text-xl font-black" data-i18n="scan.perf.val">12ms Latency</span>
+                        <span class="text-xs text-slate-500" data-i18n="scan.perf.sub">Ultra-fast response time</span>
+                    </div>
+                    <!-- Security -->
+                    <div class="glass rounded-2xl p-6 flex flex-col gap-3 reveal reveal-d2">
+                        <div class="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center"><span
+                                class="material-symbols-outlined text-green-500 text-xl">verified</span></div>
+                        <span class="text-xs text-slate-500 uppercase font-bold" data-i18n="scan.sec">Security</span>
+                        <span class="text-xl font-black" data-i18n="scan.sec.val">Military Grade</span>
+                        <span class="text-xs text-slate-500" data-i18n="scan.sec.sub">End-to-end encryption</span>
+                    </div>
+                    <!-- SEO -->
+                    <div class="glass rounded-2xl p-6 flex flex-col gap-3 reveal reveal-d3">
+                        <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center"><span
+                                class="text-primary text-xs font-bold">+22%</span></div>
+                        <span class="text-xs text-slate-500 uppercase font-bold" data-i18n="scan.seo">SEO</span>
+                        <span class="text-xl font-black" data-i18n="scan.seo.val">Optimized</span>
+                        <span class="text-xs text-slate-500" data-i18n="scan.seo.sub">Search visibility high</span>
+                    </div>
+                </div>
+
+                <!-- Vulnerabilities -->
+                <div class="glass rounded-2xl p-8 mb-8 reveal">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-lg font-bold flex items-center gap-2"><span
+                                class="material-symbols-outlined text-yellow-500">warning</span> <span
+                                data-i18n="scan.vuln.title">Vulnerabilities Detected</span></h3>
+                        <span class="text-xs text-slate-500" data-i18n="scan.vuln.count">3 potential issues
+                            flagged</span>
+                    </div>
+                    <div class="space-y-4">
+                        <div
+                            class="vuln-card flex items-center justify-between p-4 rounded-lg border border-white/5 bg-white/[0.02]">
+                            <div class="flex items-center gap-4"><span
+                                    class="material-symbols-outlined text-yellow-500">error</span>
+                                <div>
+                                    <p class="font-semibold text-sm">Outdated API Header</p>
+                                    <p class="text-xs text-slate-500">v1 legacy endpoint detected in production
+                                        environment.</p>
+                                </div>
+                            </div>
+                            <span
+                                class="text-xs text-yellow-500/80 border border-yellow-500/30 px-3 py-1 rounded-full font-bold">Revisit
+                                it</span>
+                        </div>
+                        <div
+                            class="vuln-card flex items-center justify-between p-4 rounded-lg border border-white/5 bg-white/[0.02]">
+                            <div class="flex items-center gap-4"><span
+                                    class="material-symbols-outlined text-orange-500">image</span>
+                                <div>
+                                    <p class="font-semibold text-sm">Unoptimized Asset Load</p>
+                                    <p class="text-xs text-slate-500">Hero image sequence exceeds recommended weight by
+                                        2.4MB.</p>
+                                </div>
+                            </div>
+                            <span
+                                class="text-xs text-orange-500/80 border border-orange-500/30 px-3 py-1 rounded-full font-bold">Fix
+                                with AI</span>
+                        </div>
+                        <div
+                            class="vuln-card flex items-center justify-between p-4 rounded-lg border border-white/5 bg-white/[0.02]">
+                            <div class="flex items-center gap-4"><span
+                                    class="material-symbols-outlined text-red-500">security</span>
+                                <div>
+                                    <p class="font-semibold text-sm">Missing Security Policy</p>
+                                    <p class="text-xs text-slate-500">Content Security Policy (CSP) header is not
+                                        properly configured.</p>
+                                </div>
+                            </div>
+                            <span
+                                class="text-xs text-red-500/80 border border-red-500/30 px-3 py-1 rounded-full font-bold">Fix
+                                now</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommendations -->
+                <div class="mb-12 reveal">
+                    <h3 class="text-lg font-bold mb-6" data-i18n="scan.rec.title">Architecture Recommendations</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="glass rounded-2xl p-6 hover:border-primary/40 transition-all"><span
+                                class="material-symbols-outlined text-primary text-3xl mb-4">cloud_sync</span>
+                            <h4 class="font-bold mb-2">Cloud Scale</h4>
+                            <p class="text-sm text-slate-400">Implement horizontal autoscaling to handle traffic spikes
+                                without manual intervention.</p>
+                        </div>
+                        <div class="glass rounded-2xl p-6 hover:border-primary/40 transition-all"><span
+                                class="material-symbols-outlined text-primary text-3xl mb-4">dns</span>
+                            <h4 class="font-bold mb-2">Edge Caching</h4>
+                            <p class="text-sm text-slate-400">Deploy static assets to a Global CDN network to reduce
+                                origin server load by 60%.</p>
+                        </div>
+                        <div class="glass rounded-2xl p-6 hover:border-primary/40 transition-all"><span
+                                class="material-symbols-outlined text-primary text-3xl mb-4">smart_toy</span>
+                            <h4 class="font-bold mb-2">Bot Mitigation</h4>
+                            <p class="text-sm text-slate-400">Integrate AI-driven firewall rules to block suspicious
+                                non-human behavioral patterns.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="text-center reveal">
+                    <a href="contact.html"
+                        class="inline-block bg-primary hover:bg-white hover:text-primary text-white px-12 py-5 rounded-xl text-lg font-black transition-all shadow-2xl shadow-primary/40"
+                        data-i18n="scan.cta">Request Your Free Scan</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="pt-12 pb-8 px-6 border-t border-white/5">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-500 text-sm" data-i18n="footer.copy">© 2026 Skyco Web Agency. All systems
+                    operational.</p>
+                <div class="flex gap-6"><a class="text-sm text-slate-400 hover:text-primary" href="privacy.html"
+                        data-i18n="footer.privacy">Privacy Policy</a><a
+                        class="text-sm text-slate-400 hover:text-primary" href="terms.html"
+                        data-i18n="footer.terms">Terms of Service</a></div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Enterprise | Skyco Web Agency</title>
+    <meta name="description"
+        content="Enterprise-grade digital infrastructure with unlimited scale and absolute security.">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#3211d4", "background-dark": "#0a0910" }, fontFamily: { "display": ["Manrope", "sans-serif"] } } } }
+    </script>
+</head>
+
+<body class="bg-background-dark font-display text-slate-100 min-h-screen selection:bg-primary selection:text-white">
+    <div class="relative min-h-screen overflow-x-hidden">
+
+        <!-- Nav -->
+        <nav class="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 py-4">
+            <div class="max-w-7xl mx-auto flex items-center justify-between glass rounded-full px-6 md:px-8 py-3">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="text-primary"><span class="material-symbols-outlined text-3xl">deployed_code</span>
+                    </div><span class="text-xl font-extrabold tracking-tighter uppercase italic">Skyco</span>
+                </a>
+                <div class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html"
+                        data-i18n="nav.home">Home</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="niches.html"
+                        data-i18n="nav.niches">Niches</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="intelligence-scan.html"
+                        data-i18n="nav.scan">Intelligence Scan</a>
+                    <a class="text-sm font-medium text-primary" href="enterprise.html"
+                        data-i18n="nav.enterprise">Enterprise</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="lang-toggle hidden sm:inline-flex"><button class="lang-btn active"
+                            data-lang="en">EN</button><button class="lang-btn" data-lang="nl">NL</button></div>
+                    <a href="contact.html"
+                        class="text-sm font-semibold hover:text-primary transition-colors hidden md:block"
+                        data-i18n="nav.contact">Contact</a>
+                    <a href="aanvraag.html"
+                        class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-full text-sm font-bold transition-all shadow-lg shadow-primary/20"
+                        data-i18n="nav.cta">Launch Console</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="pt-32 md:pt-40 pb-16 px-6 hero-gradient">
+            <div class="max-w-7xl mx-auto text-center reveal">
+                <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-4" data-i18n="ent.title">Enterprise
+                    Solutions</h1>
+                <p class="text-lg text-slate-400 max-w-2xl mx-auto" data-i18n="ent.sub">Unlimited scale. Absolute
+                    security. We build the digital backbone for market leaders who cannot afford to fail.</p>
+            </div>
+        </section>
+
+        <!-- Pricing Grid -->
+        <section class="pb-32 px-6">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Growth -->
+                <div
+                    class="glass p-10 rounded-3xl hover:border-primary/50 transition-all relative overflow-hidden reveal reveal-d1">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full"></div>
+                    <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">STARTER_TIER</span>
+                    <h3 class="text-2xl font-black mt-3 mb-2" data-i18n="ent.tier1">Growth</h3>
+                    <div class="text-4xl font-black text-primary mb-1" data-i18n="ent.tier1.price">From €10k</div>
+                    <p class="text-slate-400 text-sm mb-8" data-i18n="ent.tier1.desc">For startups building their first
+                        scalable product.</p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="material-symbols-outlined text-green-500 text-lg">check_circle</span> <span
+                                data-i18n="ent.feat.1">B.L.A.S.T Protocol Audit</span></li>
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="material-symbols-outlined text-green-500 text-lg">check_circle</span> <span
+                                data-i18n="ent.feat.2">Multi-region cluster</span></li>
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="material-symbols-outlined text-green-500 text-lg">check_circle</span> <span
+                                data-i18n="ent.feat.3">24/7 Priority Comms</span></li>
+                    </ul>
+                    <a href="aanvraag.html"
+                        class="block w-full text-center py-4 rounded-lg border border-primary/30 text-primary font-bold hover:bg-primary hover:text-white transition-all"
+                        data-i18n="ent.select">Select Tier</a>
+                </div>
+
+                <!-- Scale (Featured) -->
+                <div
+                    class="glass p-10 rounded-3xl border-primary/50 hover:border-primary transition-all relative overflow-hidden reveal reveal-d2 ring-1 ring-primary/30">
+                    <div
+                        class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent">
+                    </div>
+                    <div class="absolute top-0 right-0 w-48 h-48 bg-primary/10 blur-3xl rounded-full"></div>
+                    <span class="text-[10px] text-primary uppercase font-bold tracking-widest">RECOMMENDED</span>
+                    <h3 class="text-2xl font-black mt-3 mb-2" data-i18n="ent.tier2">Scale</h3>
+                    <div class="text-4xl font-black text-primary mb-1" data-i18n="ent.tier2.price">From €25k</div>
+                    <p class="text-slate-400 text-sm mb-8" data-i18n="ent.tier2.desc">For growing companies requiring
+                        enterprise-grade infra.</p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="material-symbols-outlined text-green-500 text-lg">check_circle</span> <span
+                                data-i18n="ent.feat.1">B.L.A.S.T Protocol Audit</span></li>
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="material-symbols-outlined text-green-500 text-lg">check_circle</span> <span
+                                data-i18n="ent.feat.4">Custom AI Agents</span></li>
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="material-symbols-outlined text-green-500 text-lg">check_circle</span> <span
+                                data-i18n="ent.feat.5">Dedicated Architect</span></li>
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="material-symbols-outlined text-green-500 text-lg">check_circle</span> <span
+                                data-i18n="ent.feat.6">Quantum-Resistant Security</span></li>
+                    </ul>
+                    <a href="aanvraag.html"
+                        class="block w-full text-center py-4 rounded-lg bg-primary text-white font-black hover:bg-white hover:text-primary transition-all shadow-lg shadow-primary/30"
+                        data-i18n="ent.start">Initiate Onboarding</a>
+                </div>
+
+                <!-- Sovereign -->
+                <div
+                    class="glass p-10 rounded-3xl hover:border-primary/50 transition-all relative overflow-hidden reveal reveal-d3">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full"></div>
+                    <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">DOMINANCE_PACK</span>
+                    <h3 class="text-2xl font-black mt-3 mb-2" data-i18n="ent.tier3">Sovereign</h3>
+                    <div class="text-4xl font-black text-primary mb-1" data-i18n="ent.tier3.price">Custom</div>
+                    <p class="text-slate-400 text-sm mb-8" data-i18n="ent.tier3.desc">For market leaders who demand
+                        absolute control.</p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="material-symbols-outlined text-green-500 text-lg">check_circle</span> <span
+                                data-i18n="ent.feat.4">Custom AI Agents</span></li>
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="material-symbols-outlined text-green-500 text-lg">check_circle</span> <span
+                                data-i18n="ent.feat.5">Dedicated Architect</span></li>
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="material-symbols-outlined text-green-500 text-lg">check_circle</span> <span
+                                data-i18n="ent.feat.6">Quantum-Resistant Security</span></li>
+                        <li class="flex items-center gap-3 text-sm"><span
+                                class="material-symbols-outlined text-green-500 text-lg">check_circle</span> <span
+                                data-i18n="ent.feat.7">Zero-Latency Edge Sync</span></li>
+                    </ul>
+                    <a href="contact.html"
+                        class="block w-full text-center py-4 rounded-lg border border-primary/30 text-primary font-bold hover:bg-primary hover:text-white transition-all"
+                        data-i18n="ent.select">Select Tier</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="pt-12 pb-8 px-6 border-t border-white/5">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-500 text-sm" data-i18n="footer.copy">© 2026 Skyco Web Agency. All systems
+                    operational.</p>
+                <div class="flex gap-6"><a class="text-sm text-slate-400 hover:text-primary" href="privacy.html"
+                        data-i18n="footer.privacy">Privacy Policy</a><a
+                        class="text-sm text-slate-400 hover:text-primary" href="terms.html"
+                        data-i18n="footer.terms">Terms of Service</a></div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
