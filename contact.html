@@ -26,15 +26,19 @@
                 <a href="index.html" class="flex items-center gap-3">
                     <div class="w-8 h-8 bg-primary rounded flex items-center justify-center"><span
                             class="material-symbols-outlined text-white text-xl">architecture</span></div>
-                    <span class="text-xl font-extrabold tracking-tight">Skyco</span>
+                    <span class="text-xl font-black tracking-tight uppercase italic">Skyco</span>
                 </a>
                 <div class="hidden md:flex items-center gap-8">
                     <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html"
                         data-i18n="nav.home">Home</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html"
+                        data-i18n="nav.about">About</a>
                     <a class="text-sm font-medium hover:text-primary transition-colors" href="niches.html"
                         data-i18n="nav.niches">Niches</a>
                     <a class="text-sm font-medium hover:text-primary transition-colors" href="intelligence-scan.html"
                         data-i18n="nav.scan">Intelligence Scan</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="enterprise.html"
+                        data-i18n="nav.enterprise">Enterprise</a>
                     <a class="text-sm font-medium text-primary" href="contact.html" data-i18n="nav.contact">Contact</a>
                 </div>
                 <div class="flex items-center gap-4">
@@ -48,15 +52,22 @@
         </header>
 
         <!-- Main -->
-        <main class="flex-grow flex flex-col items-center justify-center px-6 py-12 md:py-20">
-            <div class="max-w-4xl w-full text-center mb-12 reveal">
+        <main class="flex-grow flex flex-col items-center justify-center px-6 py-12 md:py-20 relative overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-10">
+                <img src="assets/contact_bg.png" class="w-full h-full object-cover mix-blend-screen"
+                    data-alt="Abstract Contact BG">
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-background-dark/50 via-transparent to-background-dark">
+                </div>
+            </div>
+            <div class="max-w-4xl w-full text-center mb-12 reveal relative z-10">
                 <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4" data-i18n="contact.title">Initiate
                     Communication</h1>
                 <p class="text-lg text-slate-400 max-w-2xl mx-auto" data-i18n="contact.sub">Speak with our architects to
                     transform your digital infrastructure into a scalable AI-driven ecosystem.</p>
             </div>
 
-            <div class="w-full max-w-2xl glass rounded-lg p-8 md:p-12 shadow-2xl relative overflow-hidden reveal">
+            <div class="w-full max-w-2xl glass rounded-lg p-8 md:p-12 shadow-2xl relative overflow-hidden reveal z-10">
                 <div class="absolute top-0 right-0 p-4 opacity-10"><span
                         class="material-symbols-outlined text-8xl">hub</span></div>
                 <form class="space-y-6 relative z-10" id="contactForm">

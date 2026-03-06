@@ -38,8 +38,14 @@
             <nav class="hidden md:flex items-center gap-10">
                 <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors" href="index.html"
                     data-i18n="nav.home">Home</a>
+                <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors" href="about.html"
+                    data-i18n="nav.about">About</a>
                 <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors" href="niches.html"
                     data-i18n="nav.niches">Niches</a>
+                <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                    href="intelligence-scan.html" data-i18n="nav.scan">Intelligence Scan</a>
+                <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors" href="enterprise.html"
+                    data-i18n="nav.enterprise">Enterprise</a>
                 <a class="text-sm font-medium text-slate-400 hover:text-white transition-colors" href="contact.html"
                     data-i18n="nav.contact">Contact</a>
             </nav>
@@ -53,8 +59,15 @@
         </header>
 
         <!-- Main -->
-        <main class="flex-1 flex flex-col items-center justify-center px-4 py-12">
-            <div class="max-w-3xl w-full">
+        <main class="flex-1 flex flex-col items-center justify-center px-4 py-12 relative overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-10">
+                <img src="assets/contact_bg.png" class="w-full h-full object-cover mix-blend-screen"
+                    data-alt="Abstract Apply BG">
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-background-dark/50 via-transparent to-background-dark">
+                </div>
+            </div>
+            <div class="max-w-3xl w-full relative z-10">
                 <div class="mb-10 text-center reveal">
                     <h2 class="text-4xl md:text-5xl font-black text-white mb-4 tracking-tight" data-i18n="app.title">
                         Project Application</h2>
@@ -122,7 +135,8 @@
                                 </select>
                                 <div
                                     class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
-                                    <span class="material-symbols-outlined">expand_more</span></div>
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </div>
                             </div>
                         </section>
 
@@ -137,19 +151,22 @@
                                         value="asap" class="sr-only" />
                                     <div
                                         class="glass border border-white/10 rounded-lg py-4 px-2 text-center cursor-pointer hover:border-primary/50 transition-all text-slate-400">
-                                        <span class="font-bold">ASAP</span></div>
+                                        <span class="font-bold">ASAP</span>
+                                    </div>
                                 </label>
                                 <label class="flex-1 min-w-[120px]"><input name="timeline" type="radio" value="3m"
                                         class="sr-only" />
                                     <div
                                         class="glass border border-white/10 rounded-lg py-4 px-2 text-center cursor-pointer hover:border-primary/50 transition-all text-slate-400">
-                                        <span class="font-bold">3 Months</span></div>
+                                        <span class="font-bold">3 Months</span>
+                                    </div>
                                 </label>
                                 <label class="flex-1 min-w-[120px]"><input name="timeline" type="radio" value="6m"
                                         class="sr-only" />
                                     <div
                                         class="glass border border-white/10 rounded-lg py-4 px-2 text-center cursor-pointer hover:border-primary/50 transition-all text-slate-400">
-                                        <span class="font-bold">6+ Months</span></div>
+                                        <span class="font-bold">6+ Months</span>
+                                    </div>
                                 </label>
                             </div>
                         </section>

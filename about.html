@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="nl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3211d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#0d0c14",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .mesh-gradient {
+            background-image:
+                radial-gradient(at 0% 0%, rgba(50, 17, 212, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(50, 17, 212, 0.1) 0px, transparent 50%);
+        }
+
+        .digital-grid {
+            background-image: linear-gradient(rgba(50, 17, 212, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(50, 17, 212, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary/30 min-h-screen relative overflow-x-hidden">
+    <div class="fixed inset-0 digital-grid pointer-events-none opacity-40"></div>
+    <div class="fixed inset-0 mesh-gradient pointer-events-none"></div>
+    <div class="relative z-10 flex flex-col min-h-screen">
+        <header class="sticky top-0 z-50 w-full glass-panel border-b border-slate-200/10">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div
+                        class="size-10 bg-primary rounded-lg flex items-center justify-center text-white shadow-[0_0_20px_rgba(50,17,212,0.4)]">
+                        <span class="material-symbols-outlined text-2xl">architecture</span>
+                    </div>
+                    <span
+                        class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white uppercase">Skyco</span>
+                </a>
+                <nav class="hidden md:flex items-center gap-10">
+                    <a href="index.html"
+                        class="text-sm font-semibold tracking-wide hover:text-primary transition-colors text-slate-600 dark:text-slate-300"
+                        data-i18n="nav.home">Home</a>
+                    <a href="about.html"
+                        class="text-sm font-semibold tracking-wide hover:text-primary transition-colors text-slate-600 dark:text-slate-300"
+                        data-i18n="footer.about_link">About</a>
+                    <a href="niches.html"
+                        class="text-sm font-semibold tracking-wide hover:text-primary transition-colors text-slate-600 dark:text-slate-300"
+                        data-i18n="nav.niches">Niches</a>
+                    <a href="intelligence-scan.html"
+                        class="text-sm font-semibold tracking-wide hover:text-primary transition-colors text-slate-600 dark:text-slate-300"
+                        data-i18n="nav.scan">Intelligence Scan</a>
+                    <a href="enterprise.html"
+                        class="text-sm font-semibold tracking-wide hover:text-primary transition-colors text-slate-600 dark:text-slate-300"
+                        data-i18n="nav.enterprise">Enterprise</a>
+                    <a href="contact.html"
+                        class="text-sm font-semibold tracking-wide hover:text-primary transition-colors text-slate-600 dark:text-slate-300"
+                        data-i18n="nav.contact">Contact</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button
+                        class="bg-primary hover:bg-primary/90 text-white text-sm font-bold px-6 py-2.5 rounded-lg transition-all shadow-lg shadow-primary/20">
+                        Initialize Project
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1">
+            <section class="max-w-7xl mx-auto px-6 py-24 md:py-32 flex flex-col items-center text-center">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest mb-8">
+                    Modern Web Agency
+                </div>
+                <h1
+                    class="text-5xl md:text-7xl font-black text-slate-900 dark:text-white leading-[1.1] tracking-tight mb-8 max-w-4xl">
+                    Over Ons - <span class="text-primary">Klaar voor de Toekomst</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed font-medium">
+                    Wij zijn een ambitieuze startup met sprankelende ideeën en een goed en consequent team dat altijd op
+                    tijd producten aflevert. Wij geloven in heldere communicatie en resultaat.
+                </p>
+                <div class="mt-12 flex flex-col sm:flex-row gap-4">
+                    <button
+                        class="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-xl shadow-primary/25">
+                        Neem Contact Op
+                    </button>
+                </div>
+            </section>
+            <section class="max-w-7xl mx-auto px-6 py-20">
+                <div class="glass-panel rounded-3xl p-8 md:p-16 relative overflow-hidden group">
+                    <div
+                        class="absolute -right-20 -top-20 size-64 bg-primary/10 blur-[100px] rounded-full group-hover:bg-primary/20 transition-all duration-700">
+                    </div>
+                    <div class="relative z-10 grid md:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">Onze Belofte
+                            </h2>
+                            <p class="text-slate-600 dark:text-slate-400 mb-8 text-lg leading-relaxed">
+                                Wij combineren de energie van een startup met de betrouwbaarheid van vakmensen. Geen
+                                vage termen, maar tastbaar resultaat.
+                            </p>
+                            <div class="space-y-6">
+                                <div class="flex items-start gap-5">
+                                    <div
+                                        class="size-14 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 border border-primary/20 text-primary">
+                                        <span class="material-symbols-outlined text-3xl">schedule</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Altijd op tijd
+                                        </h3>
+                                        <p class="text-slate-600 dark:text-slate-400">Wij garanderen dat uw project
+                                            volgens planning wordt opgeleverd, zonder verrassingen.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-5">
+                                    <div
+                                        class="size-14 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 border border-primary/20 text-primary">
+                                        <span class="material-symbols-outlined text-3xl">verified_user</span>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Directe
+                                            Communicatie</h3>
+                                        <p class="text-slate-600 dark:text-slate-400">U spreekt direct met de makers.
+                                            Geen tussenpersonen en geen ingewikkeld technisch jargon.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aspect-square rounded-2xl overflow-hidden glass-panel p-2">
+                            <div class="w-full h-full rounded-xl bg-slate-800 relative overflow-hidden group">
+                                <img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                                    data-alt="Modern tech workspace" src="assets/about_hero.png" />
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-background-dark/80 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <div class="text-primary font-bold text-sm tracking-widest uppercase mb-1">Team
+                                        Skyco</div>
+                                    <div class="text-white text-xl font-bold">Uw visie, onze uitvoering</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STORY & QUOTE SECTION -->
+            <section class="max-w-7xl mx-auto px-6 py-20 border-t border-white/5">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6">Hoe we zijn begonnen</h2>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 text-lg leading-relaxed">
+                            Skyco is ontstaan vanuit een duidelijke frustratie: veel bedrijven lopen vast door trage,
+                            verouderde websites of maatwerk software die lastig te begrijpen is. Wij vonden dat dit veel
+                            beter, sneller en vooral gebruiksvriendelijker kon.
+                        </p>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 text-lg leading-relaxed">
+                            Daarom zijn we gestart met één simpel doel: het bouwen van digitale oplossingen die wél
+                            werken. Geen ingewikkeld technisch gepraat, maar een helder plan en een resultaat waar u
+                            blij van wordt. Omdat we een compact en gedreven team zijn, schakelen we snel en hoeft u
+                            niet onnodig te wachten.
+                        </p>
+                    </div>
+
+                    <div class="glass-panel p-10 rounded-3xl relative">
+                        <span
+                            class="material-symbols-outlined absolute -top-6 -left-6 text-primary text-6xl opacity-50">format_quote</span>
+                        <p
+                            class="text-2xl font-semibold text-slate-900 dark:text-white italic leading-relaxed relative z-10 mb-6">
+                            "Een goede website is als een sterk fundament: je ziet het misschien niet direct, maar het
+                            bepaalt wel hoe hoog en stevig je bedrijf kan groeien."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="size-12 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">
+                                S
+                            </div>
+                            <div>
+                                <div class="font-bold text-slate-900 dark:text-white">Oprichters van Skyco</div>
+                                <div class="text-sm text-slate-500">De drijvende kracht achter het team</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- APPROACH SECTION -->
+            <section class="max-w-7xl mx-auto px-6 py-20">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Onze simpele aanpak
+                    </h2>
+                    <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
+                        Wij geloven niet in onnodig lastige processen. Zo werken we van idee naar eindproduct:
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div
+                        class="glass-panel p-8 rounded-3xl text-center relative hover:-translate-y-2 transition-transform border-t-4 border-t-primary/20 hover:border-t-primary cursor-default group">
+                        <div
+                            class="size-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center text-primary text-2xl font-bold mb-6 group-hover:scale-110 transition-transform duration-300">
+                            1</div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Kennismaking</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">We bespreken uitgebreid uw wensen en
+                            kijken wat we voor u kunnen betekenen.</p>
+                    </div>
+
+                    <div
+                        class="glass-panel p-8 rounded-3xl text-center relative hover:-translate-y-2 transition-transform border-t-4 border-t-primary/20 hover:border-t-primary cursor-default group">
+                        <div
+                            class="size-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center text-primary text-2xl font-bold mb-6 group-hover:scale-110 transition-transform duration-300">
+                            2</div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Voorstel</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">U krijgt een helder plan in begrijpelijke
+                            taal, zonder technische raadsels.</p>
+                    </div>
+
+                    <div
+                        class="glass-panel p-8 rounded-3xl text-center relative hover:-translate-y-2 transition-transform border-t-4 border-t-primary/20 hover:border-t-primary cursor-default group">
+                        <div
+                            class="size-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center text-primary text-2xl font-bold mb-6 group-hover:scale-110 transition-transform duration-300">
+                            3</div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Bouwen</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">Wij gaan aan de slag met het ontwerp. U
+                            wordt tussendoor stapsgewijs op de hoogte gehouden.</p>
+                    </div>
+
+                    <div
+                        class="glass-panel p-8 rounded-3xl text-center relative hover:-translate-y-2 transition-transform border-t-4 border-t-primary/20 hover:border-t-primary cursor-default group">
+                        <div
+                            class="size-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center text-primary text-2xl font-bold mb-6 group-hover:scale-110 transition-transform duration-300">
+                            4</div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Oplevering</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm">Alles wordt grondig getest. Uw website
+                            gaat pas live als u 100% tevreden bent met het resultaat.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- QUOTE BANNER -->
+            <section class="py-24 bg-primary/5 mt-10">
+                <div class="max-w-5xl mx-auto px-6 text-center">
+                    <span class="material-symbols-outlined text-primary text-5xl mb-6">chat</span>
+                    <h2
+                        class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-8 mx-auto leading-relaxed relative">
+                        <span class="opacity-30 absolute -top-8 -left-4 text-7xl text-primary font-serif">"</span>
+                        Techniek moet voor jou werken, niet andersom. Daarom maken wij complexe zaken simpel en
+                        begrijpelijk, zodat jij je kunt focussen op wat echt belangrijk is voor je bedrijf.
+                        <span class="opacity-30 absolute -bottom-10 -right-4 text-7xl text-primary font-serif">"</span>
+                    </h2>
+                </div>
+            </section>
+
+            <section class="max-w-7xl mx-auto px-6 py-32 text-center">
+                <div class="glass-panel rounded-[2.5rem] p-12 md:p-24 relative overflow-hidden">
+                    <div class="absolute -left-20 -bottom-20 size-80 bg-primary/20 blur-[120px] rounded-full"></div>
+                    <div class="relative z-10 flex flex-col items-center">
+                        <h2 class="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-8">Klaar om te
+                            beginnen?</h2>
+                        <p
+                            class="text-slate-600 dark:text-slate-400 text-xl max-w-2xl mb-12 font-medium leading-relaxed">
+                            Laten we samen bouwen aan iets moois. Helder, krachtig en effectief.
+                        </p>
+                        <button
+                            class="bg-primary hover:bg-primary/90 text-white font-black text-lg px-12 py-6 rounded-2xl transition-all shadow-[0_20px_50px_rgba(50,17,212,0.3)] hover:scale-105 active:scale-95 flex items-center gap-3">
+                            <span class="material-symbols-outlined">rocket_launch</span>
+                            Start een Project
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="glass-panel border-t border-slate-200/10 py-12 mt-auto">
+            <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+                <a href="index.html" class="flex items-center gap-3">
+                    <div class="size-8 bg-primary rounded-md flex items-center justify-center text-white">
+                        <span class="material-symbols-outlined text-lg">architecture</span>
+                    </div>
+                    <span class="font-bold tracking-tight text-slate-900 dark:text-white">SKYCO WEB AGENCY</span>
+                </a>
+                <p class="text-sm text-slate-500 font-medium whitespace-nowrap" data-i18n="footer.copy">
+                    © 2026 Skyco Web Agency. Alle systemen operationeel.
+                </p>
+                <div class="flex items-center gap-6">
+                    <a class="text-slate-400 hover:text-primary transition-colors flex items-center gap-2 text-sm font-bold"
+                        href="#">
+                        <span class="material-symbols-outlined text-xl">public</span> Twitter
+                    </a>
+                    <a class="text-slate-400 hover:text-primary transition-colors flex items-center gap-2 text-sm font-bold"
+                        href="#">
+                        <span class="material-symbols-outlined text-xl">terminal</span> GitHub
+                    </a>
+                    <a class="text-slate-400 hover:text-primary transition-colors flex items-center gap-2 text-sm font-bold"
+                        href="#">
+                        <span class="material-symbols-outlined text-xl">mail</span> Contact
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

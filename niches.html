@@ -30,6 +30,8 @@
                 <div class="hidden md:flex items-center gap-10">
                     <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html"
                         data-i18n="nav.home">Home</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html"
+                        data-i18n="footer.about_link">About</a>
                     <a class="text-sm font-medium text-primary" href="niches.html" data-i18n="nav.niches">Niches</a>
                     <a class="text-sm font-medium hover:text-primary transition-colors" href="intelligence-scan.html"
                         data-i18n="nav.scan">Intelligence Scan</a>
@@ -50,8 +52,15 @@
         </nav>
 
         <!-- Hero -->
-        <section class="pt-32 md:pt-40 pb-16 px-6 hero-gradient">
-            <div class="max-w-7xl mx-auto text-center reveal">
+        <section class="pt-32 md:pt-40 pb-16 px-6 hero-gradient relative overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-10">
+                <img src="assets/niches_bg.png" class="w-full h-full object-cover mix-blend-screen"
+                    data-alt="Niches background">
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-background-dark/50 via-transparent to-background-dark">
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto text-center reveal relative z-10">
                 <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-4" data-i18n="niches.title">Industry
                     Verticals</h1>
                 <p class="text-lg text-slate-400 max-w-2xl mx-auto" data-i18n="niches.sub">We don't do generic. Each
@@ -68,7 +77,8 @@
                     <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full"></div>
                     <div
                         class="text-primary mb-6 bg-primary/10 w-14 h-14 flex items-center justify-center rounded-2xl group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-3xl">local_hospital</span></div>
+                        <span class="material-symbols-outlined text-3xl">local_hospital</span>
+                    </div>
                     <h3 class="text-2xl font-bold mb-3" data-i18n="niches.1.title">Healthcare & MedTech</h3>
                     <p class="text-slate-400 leading-relaxed" data-i18n="niches.1.desc">HIPAA-compliant platforms with
                         real-time patient data flows.</p>
@@ -83,7 +93,8 @@
                     <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full"></div>
                     <div
                         class="text-primary mb-6 bg-primary/10 w-14 h-14 flex items-center justify-center rounded-2xl group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-3xl">account_balance</span></div>
+                        <span class="material-symbols-outlined text-3xl">account_balance</span>
+                    </div>
                     <h3 class="text-2xl font-bold mb-3" data-i18n="niches.2.title">FinTech & Banking</h3>
                     <p class="text-slate-400 leading-relaxed" data-i18n="niches.2.desc">PCI-DSS certified transaction
                         infrastructure at scale.</p>
@@ -98,7 +109,8 @@
                     <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full"></div>
                     <div
                         class="text-primary mb-6 bg-primary/10 w-14 h-14 flex items-center justify-center rounded-2xl group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-3xl">shopping_cart</span></div>
+                        <span class="material-symbols-outlined text-3xl">shopping_cart</span>
+                    </div>
                     <h3 class="text-2xl font-bold mb-3" data-i18n="niches.3.title">E-Commerce & Retail</h3>
                     <p class="text-slate-400 leading-relaxed" data-i18n="niches.3.desc">High-conversion storefronts with
                         AI-driven personalization.</p>
@@ -113,7 +125,8 @@
                     <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full"></div>
                     <div
                         class="text-primary mb-6 bg-primary/10 w-14 h-14 flex items-center justify-center rounded-2xl group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-3xl">apartment</span></div>
+                        <span class="material-symbols-outlined text-3xl">apartment</span>
+                    </div>
                     <h3 class="text-2xl font-bold mb-3" data-i18n="niches.4.title">Real Estate & PropTech</h3>
                     <p class="text-slate-400 leading-relaxed" data-i18n="niches.4.desc">Property management platforms
                         with 3D visualization.</p>
@@ -128,7 +141,8 @@
                     <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full"></div>
                     <div
                         class="text-primary mb-6 bg-primary/10 w-14 h-14 flex items-center justify-center rounded-2xl group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-3xl">local_shipping</span></div>
+                        <span class="material-symbols-outlined text-3xl">local_shipping</span>
+                    </div>
                     <h3 class="text-2xl font-bold mb-3" data-i18n="niches.5.title">Logistics & Transport</h3>
                     <p class="text-slate-400 leading-relaxed" data-i18n="niches.5.desc">Fleet tracking and route
                         optimization engines.</p>
@@ -143,7 +157,8 @@
                     <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full"></div>
                     <div
                         class="text-primary mb-6 bg-primary/10 w-14 h-14 flex items-center justify-center rounded-2xl group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-3xl">school</span></div>
+                        <span class="material-symbols-outlined text-3xl">school</span>
+                    </div>
                     <h3 class="text-2xl font-bold mb-3" data-i18n="niches.6.title">Education & EdTech</h3>
                     <p class="text-slate-400 leading-relaxed" data-i18n="niches.6.desc">LMS platforms with adaptive
                         learning algorithms.</p>

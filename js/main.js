@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // ─── TYPEWRITER ───
   const typeEl = document.getElementById('typewriter');
   if (typeEl) {
-    const wordsEN = ['Digital Dominance', 'Next-Gen Systems', 'AI-Driven Growth', 'Enterprise Scale'];
-    const wordsNL = ['Digitale Dominantie', 'Next-Gen Systemen', 'AI-Gedreven Groei', 'Enterprise Schaalbaarheid'];
+    const wordsEN = ['Web Development', 'Custom Software', 'Digital Growth', 'Scalable Platforms'];
+    const wordsNL = ['Webontwikkeling', 'Maatwerk Software', 'Digitale Groei', 'Schaalbare Platforms'];
     let i = 0, j = 0, deleting = false;
     function type() {
       const lang = localStorage.getItem('skyco-lang') || 'en';

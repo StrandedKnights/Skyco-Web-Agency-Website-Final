@@ -31,6 +31,8 @@
                 <div class="hidden md:flex items-center gap-10">
                     <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html"
                         data-i18n="nav.home">Home</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html"
+                        data-i18n="nav.about">About</a>
                     <a class="text-sm font-medium hover:text-primary transition-colors" href="niches.html"
                         data-i18n="nav.niches">Niches</a>
                     <a class="text-sm font-medium hover:text-primary transition-colors" href="intelligence-scan.html"
@@ -52,8 +54,15 @@
         </nav>
 
         <!-- Hero -->
-        <section class="pt-32 md:pt-40 pb-16 px-6 hero-gradient">
-            <div class="max-w-7xl mx-auto text-center reveal">
+        <section class="pt-32 md:pt-40 pb-16 px-6 hero-gradient relative overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-20">
+                <img src="assets/enterprise_network.png" class="w-full h-full object-cover mix-blend-screen"
+                    data-alt="Enterprise Network">
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-background-dark/50 via-transparent to-background-dark">
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto text-center reveal relative z-10">
                 <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-4" data-i18n="ent.title">Enterprise
                     Solutions</h1>
                 <p class="text-lg text-slate-400 max-w-2xl mx-auto" data-i18n="ent.sub">Unlimited scale. Absolute
@@ -108,7 +117,7 @@
                                 data-i18n="ent.feat.1">B.L.A.S.T Protocol Audit</span></li>
                         <li class="flex items-center gap-3 text-sm"><span
                                 class="material-symbols-outlined text-green-500 text-lg">check_circle</span> <span
-                                data-i18n="ent.feat.4">Custom AI Agents</span></li>
+                                data-i18n="ent.feat.4">Custom Automation</span></li>
                         <li class="flex items-center gap-3 text-sm"><span
                                 class="material-symbols-outlined text-green-500 text-lg">check_circle</span> <span
                                 data-i18n="ent.feat.5">Dedicated Architect</span></li>
@@ -133,7 +142,7 @@
                     <ul class="space-y-4 mb-10">
                         <li class="flex items-center gap-3 text-sm"><span
                                 class="material-symbols-outlined text-green-500 text-lg">check_circle</span> <span
-                                data-i18n="ent.feat.4">Custom AI Agents</span></li>
+                                data-i18n="ent.feat.4">Custom Automation</span></li>
                         <li class="flex items-center gap-3 text-sm"><span
                                 class="material-symbols-outlined text-green-500 text-lg">check_circle</span> <span
                                 data-i18n="ent.feat.5">Dedicated Architect</span></li>

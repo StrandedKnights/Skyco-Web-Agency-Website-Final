@@ -2,6 +2,7 @@
 const TRANSLATIONS = {
     // ─── NAVBAR ───
     "nav.home": { en: "Home", nl: "Home" },
+    "nav.about": { en: "About Us", nl: "Over Ons" },
     "nav.niches": { en: "Niches", nl: "Niches" },
     "nav.scan": { en: "Intelligence Scan", nl: "Intelligence Scan" },
     "nav.enterprise": { en: "Enterprise", nl: "Enterprise" },
@@ -10,47 +11,65 @@ const TRANSLATIONS = {
     "nav.getstarted": { en: "Get Started", nl: "Aan de slag" },
 
     // ─── HERO ───
-    "hero.badge": { en: "Next-Gen Infrastructure", nl: "Next-Gen Infrastructuur" },
-    "hero.title1": { en: "Architecting", nl: "Architectuur voor" },
-    "hero.title2": { en: "Digital Dominance", nl: "Digitale Dominantie" },
+    "hero.badge": { en: "Your Partner for Success", nl: "Jouw partner voor succes" },
+    "hero.title1": { en: "Your Website,", nl: "Jouw website," },
+    "hero.title2": { en: "Our Expertise", nl: "Onze expertise" },
     "hero.sub": {
-        en: "Bespoke SaaS infrastructure and AI-driven ecosystems for the modern industrial age. We build the backbone of tomorrow's market leaders.",
-        nl: "Op maat gemaakte SaaS-infrastructuur en AI-gedreven ecosystemen voor het moderne bedrijfsleven. Wij bouwen de ruggengraat van de marktleiders van morgen."
+        en: "Discover the power of a website that truly works for your business. From the first design to launch, we arrange everything down to the last detail. Professional, clear, and completely hassle-free.",
+        nl: "Ontdek de kracht van een website die écht werkt voor uw bedrijf. Van het eerste ontwerp tot de livegang regelen wij alles tot in de puntjes. Professioneel, helder en volledig ontzorgd."
     },
     "hero.cta1": { en: "Initialize Systems Scan", nl: "Start Systeem Scan" },
     "hero.cta2": { en: "View Our Niches", nl: "Bekijk Onze Niches" },
     "hero.stat.latency": { en: "Latency", nl: "Latentie" },
     "hero.stat.load": { en: "System Load", nl: "Systeembelasting" },
     "hero.stat.optimal": { en: "Optimal", nl: "Optimaal" },
-    "hero.core": { en: "Central Intelligence Core", nl: "Centraal Intelligentie Kern" },
+    "hero.core": { en: "Reliable Systems", nl: "Betrouwbare Systemen" },
 
     // ─── SERVICES ───
-    "services.title": { en: "Our Core Capabilities", nl: "Onze Kerncompetenties" },
+    "services.title": { en: "What We Can Do for You", nl: "Wat wij voor u doen" },
     "services.sub": {
-        en: "Sleek digital architecture powered by glassmorphic design and high-end engineering for enterprise demands.",
-        nl: "Strakke digitale architectuur aangedreven door glassmorphic design en high-end engineering voor enterprise eisen."
+        en: "Reliable digital solutions designed to help your business grow and work more efficiently.",
+        nl: "Betrouwbare digitale oplossingen ontworpen om uw bedrijf te laten groeien en efficiënter te laten werken."
     },
-    "services.1.title": { en: "Hyper-Scale Infrastructure", nl: "Hyper-Schaal Infrastructuur" },
+    "services.1.title": { en: "Websites & Apps", nl: "Websites & Apps" },
     "services.1.desc": {
-        en: "Engineered for zero-latency global performance. Our clusters deploy with elastic precision across any continent.",
-        nl: "Ontworpen voor zero-latency wereldwijde prestaties. Onze clusters schalen elastisch over elk continent."
+        en: "Fast, modern websites and applications that provide a great user experience on any device.",
+        nl: "Snelle, moderne websites en applicaties die een geweldige ervaring bieden op elk apparaat."
     },
-    "services.2.title": { en: "Autonomous Intelligence", nl: "Autonome Intelligentie" },
+    "services.2.title": { en: "Process Automation", nl: "Automatisering" },
     "services.2.desc": {
-        en: "Deeply integrated AI agents that manage complexity, automate workflows, and predict resource needs before they happen.",
-        nl: "Diep geïntegreerde AI-agents die complexiteit beheren, workflows automatiseren en behoeften voorspellen voordat ze zich voordoen."
+        en: "We help you automate repetitive tasks so you can focus on running your business.",
+        nl: "Wij helpen u herhalende taken te automatiseren, zodat u zich kunt concentreren op het runnen van uw bedrijf."
     },
-    "services.3.title": { en: "Fortified Security", nl: "Versterkte Beveiliging" },
+    "services.3.title": { en: "Security & Reliability", nl: "Veiligheid & Betrouwbaarheid" },
     "services.3.desc": {
-        en: "Military-grade encryption layers as a standard. We protect your architecture with quantum-resistant protocol foundations.",
-        nl: "Militaire encryptielagen als standaard. Wij beschermen uw architectuur met quantumbestendige protocolbases."
+        en: "Your data is safe with us. We provide ongoing support and top-tier security for all our products.",
+        nl: "Uw gegevens zijn veilig bij ons. Wij bieden continue ondersteuning en de beste beveiliging voor al onze producten."
     },
+
+    // ─── TESTIMONIALS ───
+    "testimonials.title": { en: "Trusted by Industry Leaders", nl: "Vertrouwd door Innovatieve Bedrijven" },
+    "testimonials.sub": {
+        en: "See what our clients say about our robust digital solutions and hassle-free approach.",
+        nl: "Lees wat onze klanten zeggen over onze betrouwbare digitale oplossingen en onze stressvrije aanpak."
+    },
+    "test.1.body": { en: "\"Skyco transformed our completely outdated platform into a lightning-fast ecosystem. We finally have a system that supports our growth without technical headaches.\"", nl: "\"Skyco heeft ons compleet verouderde platform getransformeerd tot een bliksemsnel ecosysteem. We hebben eindelijk een systeem dat onze groei ondersteunt zonder technische hoofdpijn.\"" },
+    "test.1.name": { en: "Sarah Jenkins", nl: "Sarah Jenkins" },
+    "test.1.role": { en: "Operations Director, TechFlow", nl: "Operations Director, TechFlow" },
+
+    "test.2.body": { en: "\"The clarity and speed of communication was amazing. They don't just build a website; they think along with your business goals and deliver beyond expectations.\"", nl: "\"De helderheid en communicatiesnelheid was geweldig. Ze bouwen niet zomaar een website; ze denken mee met de bedrijfsdoelen en leveren boven verwachting.\"" },
+    "test.2.name": { en: "Mark de Vries", nl: "Mark de Vries" },
+    "test.2.role": { en: "Founder, InnovateRetail", nl: "Oprichter, InnovateRetail" },
+
+    "test.3.body": { en: "\"Finally a web agency that doesn't hide behind technical jargon. Clear arrangements, tight deadlines, and an end result that perfectly matches our vision.\"", nl: "\"Eindelijk een webbureau dat zich niet verstopt achter technisch jargon. Heldere afspraken, strakke deadlines, en een eindresultaat dat perfect aansluit op onze visie.\"" },
+    "test.3.name": { en: "Elena Rodriguez", nl: "Elena Rodriguez" },
+    "test.3.role": { en: "CEO, NexaGroup", nl: "CEO, NexaGroup" },
 
     // ─── CTA ───
     "cta.title": { en: "Ready to Scale the Future?", nl: "Klaar voor de Toekomst?" },
     "cta.sub": {
-        en: "Connect with our systems architects to map out your digital dominance strategy.",
-        nl: "Neem contact op met onze systeemarchitecten om uw digitale dominantiestrategie uit te stippelen."
+        en: "Discuss your goals with our experts to build a scalable and powerful digital platform.",
+        nl: "Bespreek uw doelen met onze experts om een schaalbaar en krachtig digitaal platform te bouwen."
     },
     "cta.btn": { en: "Initiate Consultation", nl: "Start Consultatie" },
 
@@ -72,14 +91,14 @@ const TRANSLATIONS = {
     // ─── CONTACT PAGE ───
     "contact.title": { en: "Initiate Communication", nl: "Start Communicatie" },
     "contact.sub": {
-        en: "Speak with our architects to transform your digital infrastructure into a scalable AI-driven ecosystem.",
-        nl: "Spreek met onze architecten om uw digitale infrastructuur te transformeren naar een schaalbaar AI-gedreven ecosysteem."
+        en: "Discuss your goals with our experts to build a scalable and powerful digital platform.",
+        nl: "Bespreek uw doelen met onze experts om een schaalbaar en krachtig digitaal platform te bouwen."
     },
     "contact.name": { en: "Full Name", nl: "Volledige Naam" },
     "contact.email": { en: "Enterprise Email", nl: "Zakelijk E-mail" },
     "contact.subject": { en: "Subject", nl: "Onderwerp" },
     "contact.subject.1": { en: "Infrastructure Audit", nl: "Infrastructuur Audit" },
-    "contact.subject.2": { en: "AI Integration", nl: "AI Integratie" },
+    "contact.subject.2": { en: "Custom Web App", nl: "Maatwerk Webapplicatie" },
     "contact.subject.3": { en: "Custom Web Ecosystem", nl: "Maatwerk Web Ecosysteem" },
     "contact.subject.4": { en: "Other Inquiry", nl: "Overige Vraag" },
     "contact.message": { en: "Message", nl: "Bericht" },
@@ -103,7 +122,7 @@ const TRANSLATIONS = {
     "app.scope": { en: "Project Scope", nl: "Project Omvang" },
     "app.scope.saas": { en: "SaaS", nl: "SaaS" },
     "app.scope.mobile": { en: "Mobile App", nl: "Mobiele App" },
-    "app.scope.ai": { en: "AI Integration", nl: "AI Integratie" },
+    "app.scope.ai": { en: "Custom Software", nl: "Maatwerk Software" },
     "app.scope.enterprise": { en: "Enterprise Infrastructure", nl: "Enterprise Infrastructuur" },
     "app.budget": { en: "Investment Range", nl: "Investeringsbereik" },
     "app.timeline": { en: "Timeline Expectations", nl: "Tijdlijn Verwachtingen" },
@@ -151,7 +170,7 @@ const TRANSLATIONS = {
     "niches.2.title": { en: "FinTech & Banking", nl: "FinTech & Bankieren" },
     "niches.2.desc": { en: "PCI-DSS certified transaction infrastructure at scale.", nl: "PCI-DSS gecertificeerde transactie-infrastructuur op schaal." },
     "niches.3.title": { en: "E-Commerce & Retail", nl: "E-Commerce & Retail" },
-    "niches.3.desc": { en: "High-conversion storefronts with AI-driven personalization.", nl: "Hoog-converterende webshops met AI-gedreven personalisatie." },
+    "niches.3.desc": { en: "High-conversion storefronts with smart personalization.", nl: "Hoog-converterende webshops met slimme personalisatie." },
     "niches.4.title": { en: "Real Estate & PropTech", nl: "Vastgoed & PropTech" },
     "niches.4.desc": { en: "Property management platforms with 3D visualization.", nl: "Vastgoedbeheerplatforms met 3D-visualisatie." },
     "niches.5.title": { en: "Logistics & Transport", nl: "Logistiek & Transport" },
@@ -177,7 +196,7 @@ const TRANSLATIONS = {
     "ent.feat.1": { en: "B.L.A.S.T Protocol Audit", nl: "B.L.A.S.T Protocol Audit" },
     "ent.feat.2": { en: "Multi-region cluster", nl: "Multi-regio cluster" },
     "ent.feat.3": { en: "24/7 Priority Comms", nl: "24/7 Prioritaire Communicatie" },
-    "ent.feat.4": { en: "Custom AI Agents", nl: "Maatwerk AI Agents" },
+    "ent.feat.4": { en: "Custom Automation", nl: "Maatwerk Automatisering" },
     "ent.feat.5": { en: "Dedicated Architect", nl: "Toegewijd Architect" },
     "ent.feat.6": { en: "Quantum-Resistant Security", nl: "Quantumbestendige Beveiliging" },
     "ent.feat.7": { en: "Zero-Latency Edge Sync", nl: "Zero-Latency Edge Sync" },
@@ -231,8 +250,8 @@ const TRANSLATIONS = {
     },
     "terms.s1.title": { en: "1. Services", nl: "1. Diensten" },
     "terms.s1.body": {
-        en: "Skyco Web Agency provides web development, AI integration, and digital infrastructure services. All projects are governed by individual project agreements that supplement these terms.",
-        nl: "Skyco Web Agency biedt webontwikkeling, AI-integratie en digitale infrastructuurdiensten. Alle projecten worden beheerst door individuele projectovereenkomsten die deze voorwaarden aanvullen."
+        en: "Skyco Web Agency provides web development, software automation, and digital infrastructure services. All projects are governed by individual project agreements that supplement these terms.",
+        nl: "Skyco Web Agency biedt webontwikkeling, software-automatisering en digitale infrastructuurdiensten. Alle projecten worden beheerst door individuele projectovereenkomsten die deze voorwaarden aanvullen."
     },
     "terms.s2.title": { en: "2. Intellectual Property", nl: "2. Intellectueel Eigendom" },
     "terms.s2.body": {
