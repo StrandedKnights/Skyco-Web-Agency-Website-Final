@@ -1,14 +1,76 @@
+/**
+ * © 2026 Skyco Web Agency. Alle rechten voorbehouden.
+ * EIGENDOMSRECHT: Dit bronbestand en de daarin vervatte algoritmen, structuren en methodieken zijn het exclusieve intellectuele eigendom van Skyco Web Agency.
+ * GEBRUIKSBEPERKING: Ongeautoriseerde reproductie, kopieergedrag, reverse engineering of distributie van deze code, in welke vorm dan ook, is ten strengste verboden zonder uitdrukkelijke schriftelijke toestemming van Skyco Web Agency.
+ * RECHTSGEVOLGEN: Schending van deze bepalingen zal leiden tot directe civielrechtelijke en strafrechtelijke vervolging conform de Nederlandse auteurswet en internationale verdragen inzake intellectueel eigendom.
+ * KWALIFICATIE: Dit bestand bevat bedrijfsgeheimen en vertrouwelijke informatie van Skyco Web Agency.
+ */
 // === SKYCO WEB AGENCY — i18n LANGUAGE SYSTEM ===
 const TRANSLATIONS = {
     // ─── NAVBAR ───
     "nav.home": { en: "Home", nl: "Home" },
     "nav.about": { en: "About Us", nl: "Over Ons" },
+    "nav.portfolio": { en: "Portfolio", nl: "Portfolio" },
     "nav.niches": { en: "Niches", nl: "Niches" },
     "nav.scan": { en: "Intelligence Scan", nl: "Intelligence Scan" },
     "nav.enterprise": { en: "Enterprise", nl: "Enterprise" },
     "nav.contact": { en: "Contact", nl: "Contact" },
     "nav.cta": { en: "Launch Console", nl: "Start Console" },
     "nav.getstarted": { en: "Get Started", nl: "Aan de slag" },
+
+    // ─── PORTFOLIO ───
+    "portfolio.title": { en: "Our Portfolio", nl: "Ons Portfolio" },
+    "portfolio.sub": {
+        en: "A showcase of high-end digital solutions and architectural excellence.",
+        nl: "Een overzicht van hoogwaardige digitale oplossingen en architecturale uitmuntendheid."
+    },
+    "portfolio.project.vault.title": { en: "Vault Financial Dashboard", nl: "Vault Financieel Dashboard" },
+    "portfolio.project.vault.desc": {
+        en: "A premium, secure asset management interface with real-time data flows.",
+        nl: "Een premium, veilige interface voor activabeheer met realtime datastromen."
+    },
+    "portfolio.project.stride.title": { en: "Stride Fitness Tracker", nl: "Stride Fitness Tracker" },
+    "portfolio.project.stride.desc": {
+        en: "A high-performance health tracking application designed for urban athletes.",
+        nl: "Een krachtige applicatie voor het bijhouden van gezondheid, ontworpen voor stedelijke atleten."
+    },
+    // Zenith Fintech
+    "portfolio.project.zenith.title": { en: "Zenith Fintech Hub", nl: "Zenith Fintech Hub" },
+    "portfolio.project.zenith.desc": {
+        en: "A comprehensive financial ecosystem for modern banking and asset management.",
+        nl: "Een compleet financieel ecosysteem voor modern bankieren en activabeheer."
+    },
+    // Aether Real Estate
+    "portfolio.project.aether.title": { en: "Aether Real Estate", nl: "Aether Vastgoed" },
+    "portfolio.project.aether.desc": {
+        en: "A premium property management platform with immersive 3D walkthroughs.",
+        nl: "Een premium vastgoedbeheerplatform met meeslepende 3D-rondleidingen."
+    },
+    // Core Docs
+    "portfolio.project.core.title": { en: "Core Documentation", nl: "Core Documentatie" },
+    "portfolio.project.core.desc": {
+        en: "High-speed technical documentation engine for complex industrial systems.",
+        nl: "Snelle technische documentatie-engine voor complexe industriële systemen."
+    },
+    // Insight Analytics
+    "portfolio.project.insight.title": { en: "Insight Analytics", nl: "Insight Analyse" },
+    "portfolio.project.insight.desc": {
+        en: "Advanced data visualization dashboard with neural predictive modeling.",
+        nl: "Geavanceerd dashboard voor datavisualisatie met neurale voorspellende modellering."
+    },
+    // Nexus CRM
+    "portfolio.project.nexus.title": { en: "Nexus CRM", nl: "Nexus CRM" },
+    "portfolio.project.nexus.desc": {
+        en: "An autonomous customer relationship suite focused on rapid scaling.",
+        nl: "Een autonome klantrelatie-suite gericht op snelle schaalvergroting."
+    },
+    // Vanguard Security
+    "portfolio.project.vanguard.title": { en: "Vanguard Security", nl: "Vanguard Beveiliging" },
+    "portfolio.project.vanguard.desc": {
+        en: "Military-grade cybersecurity monitoring and threat detection system.",
+        nl: "Militair cyberbeveiligingsmonitorings- en dreigingsdetectiesysteem."
+    },
+    "portfolio.view": { en: "View Project", nl: "Bekijk Project" },
 
     // ─── HERO ───
     "hero.badge": { en: "Your Partner for Success", nl: "Jouw partner voor succes" },

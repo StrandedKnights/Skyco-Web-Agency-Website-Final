@@ -1,0 +1,222 @@
+<!-- 
+  © 2026 Skyco Web Agency. Alle rechten voorbehouden.
+  EIGENDOMSRECHT: Dit bronbestand en de daarin vervatte algoritmen, structuren en methodieken zijn het exclusieve intellectuele eigendom van Skyco Web Agency.
+  GEBRUIKSBEPERKING: Ongeautoriseerde reproductie, kopieergedrag, reverse engineering of distributie van deze code, in welke vorm dan ook, is ten strengste verboden zonder uitdrukkelijke schriftelijke toestemming van Skyco Web Agency.
+  RECHTSGEVOLGEN: Schending van deze bepalingen zal leiden tot directe civielrechtelijke en strafrechtelijke vervolging conform de Nederlandse auteurswet en internationale verdragen inzake intellectueel eigendom.
+  KWALIFICATIE: Dit bestand bevat bedrijfsgeheimen en vertrouwelijke informatie van Skyco Web Agency.
+-->
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Core Documentation Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Fira+Code:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1E3A8A",
+                        "accent": "#1E3A8A",
+                        "slate-50": "#F8FAFC",
+                        "slate-100": "#F1F5F9",
+                        "slate-200": "#E2E8F0",
+                        "slate-300": "#CBD5E1",
+                        "slate-400": "#94A3B8",
+                        "slate-500": "#64748B",
+                        "slate-600": "#475569",
+                        "slate-700": "#334155",
+                        "slate-800": "#1E293B",
+                        "slate-900": "#0F172A",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["Fira Code", "monospace"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-white font-display text-slate-900 antialiased;
+            }
+        }
+        .sidebar-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+        .sidebar-scroll::-webkit-scrollbar-thumb {
+            background: #E2E8F0;
+            border-radius: 10px;
+        }
+        .nav-link-active {
+            @apply text-primary font-semibold bg-blue-50/50 border-r-2 border-primary;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+      <script src="../js/protection.js"></script>
+</head>
+<body class="min-h-screen">
+<header class="sticky top-0 z-50 flex h-16 items-center justify-between border-b border-slate-100 bg-white/95 px-6 backdrop-blur-md lg:hidden">
+<div class="flex items-center gap-2.5">
+<div class="flex h-8 w-8 items-center justify-center rounded bg-primary text-white">
+<span class="material-symbols-outlined text-xl">terminal</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 uppercase">Core</span>
+</div>
+<button class="p-2 text-slate-500">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<div class="mx-auto flex w-full max-w-[1440px]">
+<aside class="hidden lg:block sticky top-0 h-screen w-64 flex-none border-r border-slate-100 bg-white">
+<div class="flex h-full flex-col">
+<div class="flex h-16 items-center gap-3 px-8">
+<div class="flex h-7 w-7 items-center justify-center rounded bg-primary text-white">
+<span class="material-symbols-outlined text-lg">terminal</span>
+</div>
+<span class="text-lg font-bold tracking-tight text-slate-900 uppercase">Core</span>
+</div>
+<nav class="sidebar-scroll flex-1 overflow-y-auto px-4 py-8">
+<div class="mb-8">
+<h5 class="mb-3 px-4 text-xs font-bold uppercase tracking-widest text-slate-400">Introduction</h5>
+<ul class="space-y-1">
+<li><a class="nav-link-active block px-4 py-2 text-sm" href="#">Getting Started</a></li>
+<li><a class="block px-4 py-2 text-sm text-slate-600 hover:text-primary" href="#">Architecture</a></li>
+<li><a class="block px-4 py-2 text-sm text-slate-600 hover:text-primary" href="#">Core Concepts</a></li>
+</ul>
+</div>
+<div class="mb-8">
+<h5 class="mb-3 px-4 text-xs font-bold uppercase tracking-widest text-slate-400">Installation</h5>
+<ul class="space-y-1">
+<li><a class="block px-4 py-2 text-sm text-slate-600 hover:text-primary" href="#">NPM / Yarn</a></li>
+<li><a class="block px-4 py-2 text-sm text-slate-600 hover:text-primary" href="#">Binary Install</a></li>
+<li><a class="block px-4 py-2 text-sm text-slate-600 hover:text-primary" href="#">Docker Support</a></li>
+</ul>
+</div>
+<div class="mb-8">
+<h5 class="mb-3 px-4 text-xs font-bold uppercase tracking-widest text-slate-400">API Reference</h5>
+<ul class="space-y-1">
+<li><a class="block px-4 py-2 text-sm text-slate-600 hover:text-primary" href="#">Authentication</a></li>
+<li><a class="block px-4 py-2 text-sm text-slate-600 hover:text-primary" href="#">Endpoints</a></li>
+<li><a class="block px-4 py-2 text-sm text-slate-600 hover:text-primary" href="#">Error Codes</a></li>
+</ul>
+</div>
+<div class="mb-8">
+<h5 class="mb-3 px-4 text-xs font-bold uppercase tracking-widest text-slate-400">Guides</h5>
+<ul class="space-y-1">
+<li><a class="block px-4 py-2 text-sm text-slate-600 hover:text-primary" href="#">Deployment</a></li>
+<li><a class="block px-4 py-2 text-sm text-slate-600 hover:text-primary" href="#">Security Best Practices</a></li>
+</ul>
+</div>
+</nav>
+</div>
+</aside>
+<main class="min-w-0 flex-1 px-6 py-12 lg:px-16 lg:py-16">
+<article class="mx-auto max-w-3xl">
+<nav class="mb-4 flex items-center gap-2 text-sm font-medium text-slate-400">
+<a class="hover:text-primary" href="#">Docs</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-primary">Getting Started</span>
+</nav>
+<h1 class="mb-6 text-4xl font-extrabold tracking-tight text-slate-900 lg:text-5xl">Getting Started</h1>
+<p class="mb-10 text-xl leading-relaxed text-slate-600">
+                    This guide provides a comprehensive overview of how to integrate Core into your existing development workflow. Core is a high-performance developer tool designed for modern engineering teams.
+                </p>
+<div class="space-y-12">
+<section id="prerequisites">
+<h2 class="mb-4 text-2xl font-bold text-slate-900">Prerequisites</h2>
+<p class="mb-6 text-slate-600">Before you begin, ensure you have the following requirements met:</p>
+<ul class="list-disc space-y-3 pl-6 text-slate-600">
+<li>Node.js version 18.0 or higher</li>
+<li>Access to the terminal or command line</li>
+<li>A valid API key from your Core dashboard</li>
+</ul>
+</section>
+<section id="quick-start">
+<h2 class="mb-4 text-2xl font-bold text-slate-900">Quick Start</h2>
+<p class="mb-6 text-slate-600">Follow these steps to initialize your project with Core CLI:</p>
+<ol class="mb-8 list-decimal space-y-4 pl-6 text-slate-600">
+<li>
+<strong class="text-slate-900">Install the CLI:</strong> Download and install the core package globally using your package manager.
+                            </li>
+<li>
+<strong class="text-slate-900">Authentication:</strong> Log in to your account to synchronize your local environment.
+                            </li>
+<li>
+<strong class="text-slate-900">Initialize:</strong> Run the initialization command in your project root directory.
+                            </li>
+</ol>
+<div class="group relative rounded-lg bg-slate-900 p-6 font-mono text-sm leading-relaxed shadow-2xl">
+<div class="mb-4 flex items-center justify-between border-b border-slate-800 pb-3">
+<span class="text-xs font-bold uppercase tracking-widest text-slate-500">Terminal</span>
+<button class="text-slate-500 hover:text-white">
+<span class="material-symbols-outlined text-lg">content_copy</span>
+</button>
+</div>
+<div class="space-y-1">
+<p class="text-slate-300"><span class="mr-2 text-primary font-bold">#</span>Install core globally</p>
+<p class="text-white"><span class="mr-2 text-slate-500">$</span>npm install -g @core/cli</p>
+<p class="text-slate-300 mt-4"><span class="mr-2 text-primary font-bold">#</span>Initialize project</p>
+<p class="text-white"><span class="mr-2 text-slate-500">$</span>core init my-awesome-project</p>
+</div>
+</div>
+</section>
+<section id="configuration">
+<h2 class="mb-4 text-2xl font-bold text-slate-900">Configuration</h2>
+<p class="mb-4 text-slate-600">
+                            Core uses a central <code class="rounded bg-slate-100 px-1.5 py-0.5 font-mono text-sm font-medium text-slate-900">core.config.js</code> file to manage all your tool settings. You can customize behaviors, plugins, and deployment targets here.
+                        </p>
+<p class="text-slate-600">
+                            For advanced setup options, refer to our <a class="font-medium text-primary underline underline-offset-4 hover:text-blue-700" href="#">Full Configuration Guide</a>.
+                        </p>
+</section>
+</div>
+<div class="h-24 lg:hidden"></div>
+</article>
+</main>
+<aside class="hidden xl:block sticky top-0 h-screen w-64 flex-none px-8 py-16">
+<h5 class="mb-4 text-xs font-bold uppercase tracking-widest text-slate-900">On This Page</h5>
+<nav>
+<ul class="space-y-4 text-sm">
+<li><a class="text-slate-500 hover:text-primary" href="#prerequisites">Prerequisites</a></li>
+<li><a class="text-slate-500 hover:text-primary" href="#quick-start">Quick Start</a></li>
+<li><a class="text-slate-500 hover:text-primary" href="#configuration">Configuration</a></li>
+</ul>
+</nav>
+<div class="mt-12 rounded-xl bg-slate-50 p-6">
+<p class="text-xs font-semibold text-slate-900">Need help?</p>
+<p class="mt-2 text-xs leading-normal text-slate-500">Join our Discord community or reach out to support.</p>
+<a class="mt-4 inline-block text-xs font-bold text-primary hover:underline" href="#">Support Channel →</a>
+</div>
+</aside>
+</div>
+<div class="fixed bottom-0 left-0 right-0 z-50 border-t border-slate-100 bg-white/95 pb-safe backdrop-blur-lg lg:hidden">
+<div class="flex h-16 items-center justify-around px-2">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Docs</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">code</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">API</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Guides</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Search</span>
+</a>
+</div>
+</div>
+
+</body></html>

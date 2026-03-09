@@ -1,0 +1,234 @@
+<!-- 
+  © 2026 Skyco Web Agency. Alle rechten voorbehouden.
+  EIGENDOMSRECHT: Dit bronbestand en de daarin vervatte algoritmen, structuren en methodieken zijn het exclusieve intellectuele eigendom van Skyco Web Agency.
+  GEBRUIKSBEPERKING: Ongeautoriseerde reproductie, kopieergedrag, reverse engineering of distributie van deze code, in welke vorm dan ook, is ten strengste verboden zonder uitdrukkelijke schriftelijke toestemming van Skyco Web Agency.
+  RECHTSGEVOLGEN: Schending van deze bepalingen zal leiden tot directe civielrechtelijke en strafrechtelijke vervolging conform de Nederlandse auteurswet en internationale verdragen inzake intellectueel eigendom.
+  KWALIFICATIE: Dit bestand bevat bedrijfsgeheimen en vertrouwelijke informatie van Skyco Web Agency.
+-->
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Insight Data Extraction Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#10b77f",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#10221c",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #10221c;
+        }
+        .radar-grid {
+            stroke: rgba(16, 183, 127, 0.2);
+            stroke-width: 1;
+        }
+        .radar-line {
+            stroke: #10b77f;
+            stroke-width: 2;
+            fill: rgba(16, 183, 127, 0.2);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+      <script src="../js/protection.js"></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-display">
+<!-- Header -->
+<header class="flex items-center justify-between px-4 py-4 border-b border-primary/20 bg-background-light dark:bg-background-dark sticky top-0 z-10">
+<div class="flex items-center gap-2">
+<div class="bg-primary p-1.5 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-background-dark text-xl font-bold">query_stats</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Insight</h1>
+</div>
+<div class="flex items-center gap-3">
+<button class="material-symbols-outlined text-slate-500 dark:text-primary/70">notifications</button>
+<div class="w-8 h-8 rounded-full bg-primary/20 border border-primary/40 overflow-hidden">
+<img alt="User Profile" data-alt="User profile avatar illustration" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdV1YdE8OextuTDnHbDOZMoBdRsQQEGkJGti9k94tHU0xIHqVHdI-dn4L_j2AxS7_CWqXGSwS9i0UfVwZOB6zJ2LGUXZEiU7AHDO4Q0ZloSqUMnZIDC5K6tEIkSowE_jK-JDdwIckkfmZTDpomvLcZpFkLCwVSzFasJaxurpXPSqrwP4vsyhy5py9AIeL8iFuCmWC94gctRIMQxZqlt1N8reb6W_OZEimmRfpGaKurt4nmq4a0EusJYWujtjrHndQ4IchILPFt4BBN"/>
+</div>
+</div>
+</header>
+<!-- Global Search -->
+<div class="px-4 py-3">
+<label class="flex flex-col w-full">
+<div class="flex w-full items-stretch rounded-xl h-11 bg-slate-200/50 dark:bg-primary/10 border border-transparent dark:border-primary/20">
+<div class="text-primary flex items-center justify-center pl-4">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full border-none bg-transparent focus:ring-0 px-3 text-sm font-normal placeholder:text-slate-500 dark:placeholder:text-primary/40" placeholder="Search extraction logs..." value=""/>
+</div>
+</label>
+</div>
+<!-- Main Content Scroll Area -->
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Extraction Filters Section -->
+<section class="px-4 py-2">
+<div class="bg-slate-100 dark:bg-primary/5 rounded-2xl p-4 border border-slate-200 dark:border-primary/10">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-primary/60">Config</h2>
+<span class="material-symbols-outlined text-primary text-sm">settings_input_component</span>
+</div>
+<!-- Simple Date Picker Mock -->
+<div class="mb-4">
+<p class="text-xs font-medium mb-2 text-slate-700 dark:text-slate-300">Extraction Period</p>
+<div class="flex items-center justify-between p-2 rounded-lg bg-white dark:bg-background-dark border border-slate-200 dark:border-primary/20">
+<span class="text-sm font-mono">2023-10-01 — 2023-10-31</span>
+<span class="material-symbols-outlined text-primary text-lg">calendar_today</span>
+</div>
+</div>
+<!-- Sources -->
+<div class="grid grid-cols-3 gap-2 mb-4">
+<label class="flex flex-col items-center p-2 rounded-lg bg-white dark:bg-background-dark border border-primary/40">
+<input checked="" class="hidden peer" type="checkbox"/>
+<span class="material-symbols-outlined text-primary mb-1">language</span>
+<span class="text-[10px] font-bold uppercase">Web</span>
+</label>
+<label class="flex flex-col items-center p-2 rounded-lg bg-slate-50 dark:bg-primary/5 border border-slate-200 dark:border-primary/10">
+<input class="hidden peer" type="checkbox"/>
+<span class="material-symbols-outlined text-slate-400 dark:text-primary/30 mb-1">api</span>
+<span class="text-[10px] font-bold uppercase text-slate-400 dark:text-primary/30">API</span>
+</label>
+<label class="flex flex-col items-center p-2 rounded-lg bg-slate-50 dark:bg-primary/5 border border-slate-200 dark:border-primary/10">
+<input class="hidden peer" type="checkbox"/>
+<span class="material-symbols-outlined text-slate-400 dark:text-primary/30 mb-1">database</span>
+<span class="text-[10px] font-bold uppercase text-slate-400 dark:text-primary/30">DB</span>
+</label>
+</div>
+<button class="w-full bg-primary hover:bg-primary/90 text-background-dark font-bold py-3 rounded-xl flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">play_arrow</span>
+                    RUN EXTRACTION
+                </button>
+</div>
+</section>
+<!-- Data Quality Radar Section -->
+<section class="px-4 py-6">
+<h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">radar</span>
+                Data Quality Metrics
+            </h3>
+<div class="relative w-full aspect-square max-w-[320px] mx-auto flex items-center justify-center bg-primary/5 rounded-full border border-primary/10">
+<svg class="w-full h-full transform -rotate-18" viewbox="0 0 200 200">
+<!-- Pentagonal Grids -->
+<polygon class="radar-grid" fill="none" points="100,20 176,75 147,165 53,165 24,75"></polygon>
+<polygon class="radar-grid" fill="none" points="100,50 145,83 128,139 72,139 55,83"></polygon>
+<polygon class="radar-grid" fill="none" points="100,80 114,91 109,112 91,112 86,91"></polygon>
+<!-- Axes -->
+<line class="radar-grid" x1="100" x2="100" y1="100" y2="20"></line>
+<line class="radar-grid" x1="100" x2="176" y1="100" y2="75"></line>
+<line class="radar-grid" x1="100" x2="147" y1="100" y2="165"></line>
+<line class="radar-grid" x1="100" x2="53" y1="100" y2="165"></line>
+<line class="radar-grid" x1="100" x2="24" y1="100" y2="75"></line>
+<!-- Data Polygon -->
+<polygon class="radar-line" points="100,35 160,80 135,150 70,140 40,60"></polygon>
+</svg>
+<!-- Labels -->
+<div class="absolute top-2 left-1/2 -translate-x-1/2 text-[10px] font-bold text-primary">ACCURACY</div>
+<div class="absolute top-1/4 -right-1 text-[10px] font-bold text-primary">COMPLETENESS</div>
+<div class="absolute bottom-4 right-1 text-[10px] font-bold text-primary">CONSISTENCY</div>
+<div class="absolute bottom-4 left-1 text-[10px] font-bold text-primary">VALIDITY</div>
+<div class="absolute top-1/4 -left-1 text-[10px] font-bold text-primary">TIMELINESS</div>
+</div>
+</section>
+<!-- Extraction Results Table -->
+<section class="px-4 pb-10">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold">Extraction Log</h3>
+<span class="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded">1,248 Records</span>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Table Row 1 -->
+<div class="p-3 bg-white dark:bg-primary/5 rounded-xl border border-slate-200 dark:border-primary/10">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">link</span>
+<span class="text-xs font-mono truncate max-w-[180px]">/v1/user/profile_data</span>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-green-500/20 text-green-500 border border-green-500/40">200 OK</span>
+</div>
+<div class="flex justify-between text-[11px] font-mono text-slate-500 dark:text-primary/60">
+<span>application/json</span>
+<span>4.2k words</span>
+</div>
+</div>
+<!-- Table Row 2 -->
+<div class="p-3 bg-white dark:bg-primary/5 rounded-xl border border-slate-200 dark:border-primary/10">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">link</span>
+<span class="text-xs font-mono truncate max-w-[180px]">/blog/deep-analytics-report</span>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-green-500/20 text-green-500 border border-green-500/40">200 OK</span>
+</div>
+<div class="flex justify-between text-[11px] font-mono text-slate-500 dark:text-primary/60">
+<span>text/html</span>
+<span>18.5k words</span>
+</div>
+</div>
+<!-- Table Row 3 -->
+<div class="p-3 bg-white dark:bg-primary/5 rounded-xl border border-slate-200 dark:border-primary/10">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">link</span>
+<span class="text-xs font-mono truncate max-w-[180px]">/api/v2/missing_resource</span>
+</div>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-red-500/20 text-red-500 border border-red-500/40">404 ERR</span>
+</div>
+<div class="flex justify-between text-[11px] font-mono text-slate-500 dark:text-primary/60">
+<span>text/plain</span>
+<span>0 words</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 w-full border-t border-slate-200 dark:border-primary/20 bg-white/80 dark:bg-background-dark/80 backdrop-blur-lg px-4 pb-6 pt-2 z-20">
+<div class="flex justify-between items-center max-w-md mx-auto">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">dashboard</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Dashboard</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-primary/40" href="#">
+<span class="material-symbols-outlined">database</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Sources</span>
+</a>
+<div class="relative -top-8">
+<button class="bg-primary text-background-dark w-14 h-14 rounded-full shadow-lg shadow-primary/40 flex items-center justify-center border-4 border-background-dark">
+<span class="material-symbols-outlined text-3xl font-bold">add</span>
+</button>
+</div>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-primary/40" href="#">
+<span class="material-symbols-outlined">unfold_more</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Extract</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-primary/40" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Settings</span>
+</a>
+</div>
+</nav>
+</body></html>
