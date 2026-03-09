@@ -1,0 +1,258 @@
+<!-- 
+  © 2026 Skyco Web Agency. Alle rechten voorbehouden.
+  EIGENDOMSRECHT: Dit bronbestand en de daarin vervatte algoritmen, structuren en methodieken zijn het exclusieve intellectuele eigendom van Skyco Web Agency.
+  GEBRUIKSBEPERKING: Ongeautoriseerde reproductie, kopieergedrag, reverse engineering of distributie van deze code, in welke vorm dan ook, is ten strengste verboden zonder uitdrukkelijke schriftelijke toestemming van Skyco Web Agency.
+  RECHTSGEVOLGEN: Schending van deze bepalingen zal leiden tot directe civielrechtelijke en strafrechtelijke vervolging conform de Nederlandse auteurswet en internationale verdragen inzake intellectueel eigendom.
+  KWALIFICATIE: Dit bestand bevat bedrijfsgeheimen en vertrouwelijke informatie van Skyco Web Agency.
+-->
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Zenith Premium Fintech Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@400;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#06b4f9",
+                        "accent-magenta": "#f906e1",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0f1d23",
+                        "glass": "rgba(255, 255, 255, 0.03)",
+                        "glass-border": "rgba(255, 255, 255, 0.1)",
+                    },
+                    fontFamily: {
+                        "display": ["Outfit", "Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "1.25rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <script src="../js/protection.js"></script>
+    <!-- Vercel Insights & Speed Insights -->
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+    <style>
+        .glassmorphism {
+            background: rgba(15, 29, 35, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .neon-glow-blue {
+            box-shadow: 0 0 15px rgba(6, 180, 249, 0.3);
+        }
+
+        .neon-glow-magenta {
+            box-shadow: 0 0 15px rgba(249, 6, 225, 0.3);
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+    <script src="../js/protection.js"></script>
+    <!-- Vercel Insights & Speed Insights -->
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+    <div class="relative flex h-screen w-full flex-col overflow-y-auto pb-20">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 flex items-center justify-between px-6 py-4 glassmorphism">
+            <div class="flex items-center gap-3">
+                <div class="bg-primary/20 p-2 rounded-lg border border-primary/30">
+                    <span class="material-symbols-outlined text-primary text-2xl">rocket_launch</span>
+                </div>
+                <h1 class="text-xl font-bold tracking-tight text-slate-100">Zenith</h1>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="relative p-2 text-slate-400 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-2xl">notifications</span>
+                    <span
+                        class="absolute top-2 right-2 flex h-2 w-2 rounded-full bg-accent-magenta neon-glow-magenta"></span>
+                </button>
+                <div class="h-10 w-10 rounded-full border-2 border-primary/50 overflow-hidden bg-slate-800">
+                    <img alt="User Profile" class="h-full w-full object-cover"
+                        data-alt="Modern professional headshot of a person"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkNBL5V6g-e64T72bSLWOUbSQNtN2AI6AlnCV7l75uuiiWOWJMc8Y5KJ_E0gk6K3WCRkTyQqQejd2C7Gciz5NzilnzOGSi9nC0Mo3hdVRGHSAYDnTfR1Ly5_oORzi2387brALy-31t6SoKfdIE50WFmhMFdIPh9LAO3oKEZxC53hTs68GDQQ9d6Uaww8psvvUHEgGab6e9YCR8TVkhuiHknBsL7_IHy3oY4bsN-eAVNwwe2SAtdzS8jLeTle9gPwNrG1fGI40GevZC" />
+                </div>
+            </div>
+        </header>
+        <!-- Main Content -->
+        <main class="flex flex-col gap-6 p-6">
+            <!-- Portfolio Hero -->
+            <section class="flex flex-col gap-4">
+                <div>
+                    <p class="text-sm font-medium text-slate-400 uppercase tracking-widest">Total Portfolio Worth</p>
+                    <div class="flex items-baseline gap-2">
+                        <h2 class="text-4xl font-bold text-slate-100">$142,580.42</h2>
+                        <span
+                            class="text-sm font-bold text-emerald-400 flex items-center bg-emerald-400/10 px-2 py-0.5 rounded-full">
+                            <span class="material-symbols-outlined text-sm">trending_up</span> 12.5%
+                        </span>
+                    </div>
+                </div>
+                <div class="relative w-full h-56 mt-4 glassmorphism rounded-xl p-4 overflow-hidden">
+                    <div class="absolute inset-0 opacity-20 bg-gradient-to-t from-primary/20 to-transparent"></div>
+                    <svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 400 150">
+                        <defs>
+                            <lineargradient id="gradient-blue" x1="0%" x2="0%" y1="0%" y2="100%">
+                                <stop offset="0%" stop-color="#06b4f9" stop-opacity="0.4"></stop>
+                                <stop offset="100%" stop-color="#06b4f9" stop-opacity="0"></stop>
+                            </lineargradient>
+                        </defs>
+                        <!-- Fill -->
+                        <path
+                            d="M0,130 C50,120 80,40 120,50 C160,60 180,110 240,90 C300,70 340,20 400,30 L400,150 L0,150 Z"
+                            fill="url(#gradient-blue)"></path>
+                        <!-- Line -->
+                        <path class="drop-shadow-[0_0_8px_rgba(6,180,249,0.8)]"
+                            d="M0,130 C50,120 80,40 120,50 C160,60 180,110 240,90 C300,70 340,20 400,30" fill="none"
+                            stroke="#06b4f9" stroke-linecap="round" stroke-width="3"></path>
+                        <!-- Highlight dots -->
+                        <circle class="neon-glow-blue" cx="120" cy="50" fill="#06b4f9" r="4"></circle>
+                        <circle class="neon-glow-magenta" cx="400" cy="30" fill="#f906e1" r="4"></circle>
+                    </svg>
+                    <div
+                        class="flex justify-between mt-2 text-[10px] font-bold text-slate-500 uppercase tracking-tighter">
+                        <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span>
+                    </div>
+                </div>
+            </section>
+            <!-- Quick Stats -->
+            <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Balance -->
+                <div class="glassmorphism rounded-xl p-5 border-l-4 border-primary">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="material-symbols-outlined text-primary">account_balance_wallet</span>
+                        <span class="text-[10px] font-bold text-slate-500 uppercase">Available</span>
+                    </div>
+                    <p class="text-xs text-slate-400">Balance</p>
+                    <p class="text-xl font-bold text-slate-100">$24,902.00</p>
+                </div>
+                <!-- Monthly Spend -->
+                <div class="glassmorphism rounded-xl p-5 border-l-4 border-accent-magenta">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="material-symbols-outlined text-accent-magenta">payments</span>
+                        <span class="text-[10px] font-bold text-slate-500 uppercase">This Month</span>
+                    </div>
+                    <p class="text-xs text-slate-400">Monthly Spend</p>
+                    <p class="text-xl font-bold text-slate-100">$4,215.80</p>
+                </div>
+                <!-- Savings Goal -->
+                <div class="glassmorphism rounded-xl p-5 border-l-4 border-emerald-400">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="material-symbols-outlined text-emerald-400">savings</span>
+                        <span class="text-[10px] font-bold text-slate-500 uppercase">75% Achieved</span>
+                    </div>
+                    <p class="text-xs text-slate-400">Savings Goal</p>
+                    <div class="mt-2 h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                        <div class="h-full bg-emerald-400 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- Recent Activity -->
+            <section class="flex flex-col gap-4">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-lg font-bold text-slate-100">Recent Activity</h3>
+                    <button class="text-sm font-semibold text-primary">View All</button>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <!-- Activity Item 1 -->
+                    <div class="flex items-center justify-between p-4 glassmorphism rounded-xl">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="flex h-12 w-12 items-center justify-center rounded-full bg-orange-500/20 text-orange-500 border border-orange-500/30">
+                                <span class="material-symbols-outlined">restaurant</span>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-100">The Modern Bistro</p>
+                                <p class="text-xs text-slate-500">Dining • Today, 2:45 PM</p>
+                            </div>
+                        </div>
+                        <p class="font-bold text-slate-100">-$84.20</p>
+                    </div>
+                    <!-- Activity Item 2 -->
+                    <div class="flex items-center justify-between p-4 glassmorphism rounded-xl">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/20 text-blue-500 border border-blue-500/30">
+                                <span class="material-symbols-outlined">flight_takeoff</span>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-100">Delta Air Lines</p>
+                                <p class="text-xs text-slate-500">Travel • Yesterday</p>
+                            </div>
+                        </div>
+                        <p class="font-bold text-slate-100">-$420.00</p>
+                    </div>
+                    <!-- Activity Item 3 -->
+                    <div class="flex items-center justify-between p-4 glassmorphism rounded-xl">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="flex h-12 w-12 items-center justify-center rounded-full bg-purple-500/20 text-purple-500 border border-purple-500/30">
+                                <span class="material-symbols-outlined">bolt</span>
+                            </div>
+                            <div>
+                                <p class="font-bold text-slate-100">City Power &amp; Light</p>
+                                <p class="text-xs text-slate-500">Utilities • Oct 24</p>
+                            </div>
+                        </div>
+                        <p class="font-bold text-slate-100">-$156.32</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Bottom Navigation Bar -->
+        <nav class="fixed bottom-0 left-0 right-0 z-50 glassmorphism border-t-0 px-6 pb-6 pt-3 rounded-t-xl">
+            <div class="flex justify-between items-center max-w-md mx-auto">
+                <a class="flex flex-col items-center gap-1 text-primary" href="#">
+                    <span class="material-symbols-outlined text-2xl fill-1">home</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest">Home</span>
+                </a>
+                <a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined text-2xl">monitoring</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest">Stats</span>
+                </a>
+                <div
+                    class="relative -top-8 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white neon-glow-blue shadow-lg border-4 border-background-dark">
+                    <span class="material-symbols-outlined text-3xl">add</span>
+                </div>
+                <a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined text-2xl">swap_horiz</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest">Swap</span>
+                </a>
+                <a class="flex flex-col items-center gap-1 text-slate-500 hover:text-primary transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined text-2xl">person</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest">Profile</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>

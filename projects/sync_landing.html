@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e27c60",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#201512",
+                        "stone-custom": "#4a4442",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"],
+                        "serif-modern": ["Playfair Display", "serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- TopAppBar / Navigation -->
+<nav class="flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50 px-6 py-4 justify-between">
+<div class="flex items-center gap-2">
+<div class="bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary text-2xl">all_inclusive</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight font-display">Sync</h2>
+</div>
+<div class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center cursor-pointer hover:bg-primary/5 rounded-full transition-colors">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</div>
+</nav>
+<!-- Hero Section -->
+<main class="@container flex-1">
+<div class="flex flex-col gap-8 px-6 py-12 @[480px]:py-20">
+<!-- Hero Image / Visual Element -->
+<div class="w-full relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary/20 to-primary/5 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+<div class="relative w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-xl shadow-sm border border-primary/10" data-alt="Minimalist desk with Japandi style lamp and plant" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD6hQKSmVbBf0hrDoThOQgsbhZKlhyzrSzxZnVwz5L5nmgE1yp5LVS3xdOSDcaPy55zFuzBW0bTvT_9Lzc_fwZlZZF8ShfNNWknjXsbHqOhfjgh6RTo0h6mkF28VjlEgPADWW1KYkajTpoyqXyzQ1jD0prPYqmZG1N4GMN_RgBFrGQWVQtYeB3iZA338d_PF51dVejOcxwVTqFW0tnHq1hHLJnmzTjH02esj-48Xdl23ZIp5RUliqKNPfbZaZXKGTC1qJTNxNN_YSw");'>
+</div>
+</div>
+<!-- Text Content -->
+<div class="flex flex-col gap-8 items-center text-center">
+<div class="flex flex-col gap-4">
+<h1 class="text-slate-900 dark:text-slate-100 text-4xl font-bold leading-[1.15] tracking-tight font-serif-modern @[480px]:text-5xl">
+                            Harmonize Your Workflow with AI
+                        </h1>
+<p class="text-stone-custom dark:text-slate-400 text-lg font-normal leading-relaxed max-w-md mx-auto">
+                            The intuitive project management tool designed for mindful productivity.
+                        </p>
+</div>
+<!-- CTA Buttons -->
+<div class="flex flex-col w-full gap-3 @[480px]:flex-row @[480px]:justify-center">
+<button class="flex min-w-[180px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 bg-primary text-white text-base font-bold transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-primary/20">
+<span class="truncate">Get Started</span>
+</button>
+<button class="flex min-w-[180px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-8 bg-transparent border-2 border-primary/20 text-slate-900 dark:text-slate-100 text-base font-bold transition-all hover:bg-primary/5">
+<span class="truncate">Watch Demo</span>
+</button>
+</div>
+</div>
+<!-- Social Proof / Stats -->
+<div class="grid grid-cols-2 gap-4 mt-8 @[480px]:grid-cols-3">
+<div class="flex flex-col gap-1 rounded-2xl p-6 bg-white/50 dark:bg-white/5 border border-primary/5">
+<p class="text-stone-custom dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Active Users</p>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight">10k+</p>
+</div>
+<div class="flex flex-col gap-1 rounded-2xl p-6 bg-white/50 dark:bg-white/5 border border-primary/5">
+<p class="text-stone-custom dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Synced</p>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight">50k+</p>
+</div>
+<div class="flex flex-col gap-1 rounded-2xl p-6 bg-white/50 dark:bg-white/5 border border-primary/5 col-span-2 @[480px]:col-span-1">
+<p class="text-stone-custom dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Efficiency</p>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold leading-tight">+40%</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col gap-8 px-6 py-12 text-center border-t border-primary/5">
+<div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+<a class="text-stone-custom dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="text-stone-custom dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Terms</a>
+<a class="text-stone-custom dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<div class="flex justify-center gap-6">
+<span class="material-symbols-outlined text-stone-custom/60 dark:text-slate-500 cursor-pointer hover:text-primary">language</span>
+<span class="material-symbols-outlined text-stone-custom/60 dark:text-slate-500 cursor-pointer hover:text-primary">share</span>
+</div>
+<p class="text-stone-custom/60 dark:text-slate-500 text-xs font-medium">© 2023 Sync AI. Design with Intention.</p>
+</footer>
+<div class="h-8"></div>
+</div>
+</body></html>

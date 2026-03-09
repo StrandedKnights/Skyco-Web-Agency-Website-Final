@@ -1,0 +1,127 @@
+<!-- 
+  © 2026 Skyco Web Agency. Alle rechten voorbehouden.
+  EIGENDOMSRECHT: Dit bronbestand en de daarin vervatte algoritmen, structuren en methodieken zijn het exclusieve intellectuele eigendom van Skyco Web Agency.
+  GEBRUIKSBEPERKING: Ongeautoriseerde reproductie, kopieergedrag, reverse engineering of distributie van deze code, in welke vorm dan ook, is ten strengste verboden zonder uitdrukkelijke schriftelijke toestemming van Skyco Web Agency.
+  RECHTSGEVOLGEN: Schending van deze bepalingen zal leiden tot directe civielrechtelijke en strafrechtelijke vervolging conform de Nederlandse auteurswet en internationale verdragen inzake intellectueel eigendom.
+  KWALIFICATIE: Dit bestand bevat bedrijfsgeheimen en vertrouwelijke informatie van Skyco Web Agency.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligence Base | Skyco Web Agency</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/protection.js"></script>
+    <!-- Vercel Insights & Speed Insights -->
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar scrolled">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo" style="display: flex; align-items: center; gap: 10px;">
+                <img src="assets/skyco_logo_v2.jpg" alt="Skyco Logo"
+                    style="height: 40px; width: 40px; border-radius: 8px; object-fit: cover;">
+                <span><span class="accent">SKY</span>CO</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="roles.html">Roles</a></li>
+                <li><a href="intelligence-base.html" class="active">Intelligence Base</a></li>
+                <li><a href="enterprise.html">Enterprise</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#console" class="btn-console">Launch Console</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- INTEL BASE HERO -->
+    <section class="section" style="padding-top: 180px;">
+        <div class="container">
+            <div class="fade-up">
+                <span class="section-tag">KNOWLEDGE REPOSITORY</span>
+                <h1 class="section-title">The Intelligence Base</h1>
+                <p class="section-sub" style="margin-left:0;">Technical insights, R&D breakthroughs, and the B.L.A.S.T
+                    protocol documentation.</p>
+            </div>
+
+            <!-- SEARCH BAR -->
+            <div class="card glassmorphism fade-up" style="margin: 40px 0; padding: 20px; display: flex; gap: 15px;">
+                <div style="flex-grow: 1; position: relative;">
+                    <i data-lucide="search"
+                        style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--text-muted); width: 18px;"></i>
+                    <input type="text" placeholder="Search Intel Database..."
+                        style="width: 100%; background: transparent; border: none; padding: 10px 10px 10px 45px; color: white; outline: none; font-family: var(--font);">
+                </div>
+                <button class="btn btn-primary" style="padding: 10px 20px;">Query</button>
+            </div>
+
+            <!-- ARTICLE GRID -->
+            <div class="portfolio-grid">
+
+                <div class="card fade-up">
+                    <span class="portfolio-tag">PROTOCOL</span>
+                    <h3 class="portfolio-title">Implementing the B.L.A.S.T Protocol in Modern SaaS</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 10px;">A detailed breakdown of
+                        Blueprint, Link, Architect, Stylize, and Trigger phases for ultra-fast deployment.</p>
+                    <a href="#" class="btn-link" style="margin-top: 20px;">Read SOP <i data-lucide="book-open"></i></a>
+                </div>
+
+                <div class="card fade-up">
+                    <span class="portfolio-tag">CASE_STUDY</span>
+                    <h3 class="portfolio-title">Dominating the Driving School Market with Custom Software</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 10px;">How Motorway Rijschool
+                        used autonomous intelligence to outpace traditional competitors by 400%.</p>
+                    <a href="#" class="btn-link" style="margin-top: 20px;">View Report <i
+                            data-lucide="bar-chart"></i></a>
+                </div>
+
+                <div class="card fade-up">
+                    <span class="portfolio-tag">RESEARCH</span>
+                    <h3 class="portfolio-title">The Future of Quantum-Resistant UI Design</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 10px;">Why the "Console"
+                        aesthetic is more than just a trend—it's a requirement for high-integrity brands.</p>
+                    <a href="#" class="btn-link" style="margin-top: 20px;">Open Draft <i
+                            data-lucide="file-text"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 Skyco Web Agency. All systems operational.</p>
+                <div class="nav-logo" style="font-size: 1rem; display: flex; align-items: center; gap: 8px;">
+                    <img src="assets/skyco_logo_v2.jpg" alt="Skyco Logo"
+                        style="height: 24px; width: 24px; border-radius: 4px; object-fit: cover;">
+                    <span><span class="accent">SKY</span>CO</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

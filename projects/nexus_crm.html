@@ -1,0 +1,338 @@
+<!-- 
+  © 2026 Skyco Web Agency. Alle rechten voorbehouden.
+  EIGENDOMSRECHT: Dit bronbestand en de daarin vervatte algoritmen, structuren en methodieken zijn het exclusieve intellectuele eigendom van Skyco Web Agency.
+  GEBRUIKSBEPERKING: Ongeautoriseerde reproductie, kopieergedrag, reverse engineering of distributie van deze code, in welke vorm dan ook, is ten strengste verboden zonder uitdrukkelijke schriftelijke toestemming van Skyco Web Agency.
+  RECHTSGEVOLGEN: Schending van deze bepalingen zal leiden tot directe civielrechtelijke en strafrechtelijke vervolging conform de Nederlandse auteurswet en internationale verdragen inzake intellectueel eigendom.
+  KWALIFICATIE: Dit bestand bevat bedrijfsgeheimen en vertrouwelijke informatie van Skyco Web Agency.
+-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nexus Admin CRM Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <script src="../js/protection.js"></script>
+    <!-- Vercel Insights & Speed Insights -->
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 h-screen flex flex-col overflow-hidden">
+    <!-- Top Bar -->
+    <header
+        class="flex h-16 w-full items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 shrink-0">
+        <div class="flex items-center gap-3">
+            <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white">
+                <span class="material-symbols-outlined text-lg">rocket_launch</span>
+            </div>
+            <h1 class="text-lg font-bold tracking-tight">Nexus</h1>
+        </div>
+        <div class="flex items-center gap-4">
+            <button
+                class="relative flex h-10 w-10 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+                <span class="material-symbols-outlined text-slate-600 dark:text-slate-400">notifications</span>
+                <span class="absolute top-2 right-2 flex h-2 w-2 rounded-full bg-red-500"></span>
+            </button>
+            <div
+                class="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border border-primary/30">
+                <img alt="Admin Avatar" class="h-full w-full object-cover"
+                    data-alt="Corporate headshot of a business administrator"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbXXg650nwtv2WfRB-bwuXS1MAwnwLXM08PuuxTrfakX7i0mJa_FSbWKsjCE0eub0Lq5N_33H4DV0Ssxt5G-PavjqTiksf6OmiGGp572MgGr8SSSncdOW6c_DkeR3uN8KX5kHkaIDoCnctIVb46Shc1jj-UF4eiIM1pQz8qX754vSKOENn-_n8TvQL96OyQZ41wPjxgn6Ah-rN0tCcSxLtypsIr8AOCm2mGsH7-DyBZ-XCWRr-hzNsR8CGvM21ASfrCm8GmoXv7p8" />
+            </div>
+        </div>
+    </header>
+    <!-- Main Content Wrapper -->
+    <main class="flex-1 flex overflow-hidden">
+        <!-- Navigation Sidebar (Mobile View) - Hidden on extreme small if needed, but here designed as functional desktop-style side menu scaled for mobile viewport -->
+        <aside
+            class="hidden md:flex w-20 flex-col items-center border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 py-6 gap-8 shrink-0">
+            <a class="text-primary flex flex-col items-center gap-1" href="#">
+                <span class="material-symbols-outlined">dashboard</span>
+            </a>
+            <a class="text-slate-400 hover:text-primary flex flex-col items-center gap-1 transition-colors" href="#">
+                <span class="material-symbols-outlined">group</span>
+            </a>
+            <a class="text-slate-400 hover:text-primary flex flex-col items-center gap-1 transition-colors" href="#">
+                <span class="material-symbols-outlined">receipt_long</span>
+            </a>
+            <a class="text-slate-400 hover:text-primary flex flex-col items-center gap-1 transition-colors" href="#">
+                <span class="material-symbols-outlined">bar_chart</span>
+            </a>
+            <a class="mt-auto text-slate-400 hover:text-primary flex flex-col items-center gap-1 transition-colors"
+                href="#">
+                <span class="material-symbols-outlined">settings</span>
+            </a>
+        </aside>
+        <!-- Main Scrollable Area -->
+        <div class="flex-1 flex flex-col overflow-y-auto bg-background-light dark:bg-background-dark">
+            <!-- Global Search -->
+            <div class="px-4 py-4">
+                <div class="relative flex w-full max-w-md items-center">
+                    <span class="material-symbols-outlined absolute left-3 text-slate-400">search</span>
+                    <input
+                        class="w-full h-11 rounded-lg border-none bg-white dark:bg-slate-900 pl-10 text-sm focus:ring-2 focus:ring-primary shadow-sm dark:text-slate-100"
+                        placeholder="Global search..." type="text" />
+                </div>
+            </div>
+            <!-- Analytics Cards -->
+            <div class="px-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
+                <div
+                    class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 shadow-sm">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Total
+                            Customers</span>
+                        <span
+                            class="material-symbols-outlined text-primary bg-primary/10 rounded-lg p-1 text-base">group</span>
+                    </div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-2xl font-bold">1,284</span>
+                        <span class="text-xs font-medium text-emerald-500">+12%</span>
+                    </div>
+                </div>
+                <div
+                    class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 shadow-sm">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Revenue</span>
+                        <span
+                            class="material-symbols-outlined text-primary bg-primary/10 rounded-lg p-1 text-base">payments</span>
+                    </div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-2xl font-bold">$42.5k</span>
+                        <span class="text-xs font-medium text-rose-500">-3%</span>
+                    </div>
+                </div>
+                <div
+                    class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 shadow-sm">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Open Tickets</span>
+                        <span
+                            class="material-symbols-outlined text-primary bg-primary/10 rounded-lg p-1 text-base">confirmation_number</span>
+                    </div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="text-2xl font-bold">12</span>
+                        <span class="text-xs font-medium text-emerald-500">+5%</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Customer Management Section -->
+            <div class="px-4 mt-6 pb-20">
+                <div
+                    class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm overflow-hidden">
+                    <div class="p-4 border-b border-slate-100 dark:border-slate-800 flex flex-col gap-4">
+                        <div class="flex items-center justify-between">
+                            <h2 class="font-bold text-lg">Customer Management</h2>
+                            <button class="text-primary text-sm font-semibold">View All</button>
+                        </div>
+                        <!-- Filter Bar -->
+                        <div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
+                            <button
+                                class="bg-primary text-white px-3 py-1.5 rounded-lg text-xs font-medium">Active</button>
+                            <button
+                                class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-3 py-1.5 rounded-lg text-xs font-medium">Inactive</button>
+                            <button
+                                class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-3 py-1.5 rounded-lg text-xs font-medium">Pending</button>
+                        </div>
+                        <div class="relative flex items-center">
+                            <span
+                                class="material-symbols-outlined absolute left-3 text-slate-400 text-sm">filter_alt</span>
+                            <input
+                                class="w-full h-10 rounded-lg border border-slate-200 dark:border-slate-700 bg-transparent pl-10 text-sm focus:ring-1 focus:ring-primary"
+                                placeholder="Filter by name..." type="text" />
+                        </div>
+                    </div>
+                    <!-- Table -->
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead
+                                class="bg-slate-50 dark:bg-slate-800/50 text-slate-500 text-[11px] uppercase tracking-wider font-semibold">
+                                <tr>
+                                    <th class="px-4 py-3">Customer</th>
+                                    <th class="px-4 py-3">Status</th>
+                                    <th class="px-4 py-3">Date</th>
+                                    <th class="px-4 py-3"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+                                <tr>
+                                    <td class="px-4 py-4">
+                                        <div class="flex flex-col">
+                                            <span class="text-sm font-semibold">Alex Rivera</span>
+                                            <span class="text-xs text-slate-500">alex@nexus.io</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4">
+                                        <span
+                                            class="inline-flex items-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 px-2 py-0.5 text-[10px] font-medium text-emerald-700 dark:text-emerald-400">Active</span>
+                                    </td>
+                                    <td class="px-4 py-4 text-xs text-slate-500">Oct 12, 2023</td>
+                                    <td class="px-4 py-4 text-right">
+                                        <button class="text-slate-400"><span
+                                                class="material-symbols-outlined text-lg">more_vert</span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-4">
+                                        <div class="flex flex-col">
+                                            <span class="text-sm font-semibold">Sarah Chen</span>
+                                            <span class="text-xs text-slate-500">schen@mail.com</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4">
+                                        <span
+                                            class="inline-flex items-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 px-2 py-0.5 text-[10px] font-medium text-emerald-700 dark:text-emerald-400">Active</span>
+                                    </td>
+                                    <td class="px-4 py-4 text-xs text-slate-500">Oct 10, 2023</td>
+                                    <td class="px-4 py-4 text-right">
+                                        <button class="text-slate-400"><span
+                                                class="material-symbols-outlined text-lg">more_vert</span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-4">
+                                        <div class="flex flex-col">
+                                            <span class="text-sm font-semibold">Mark Thompson</span>
+                                            <span class="text-xs text-slate-500">m.tom@corp.com</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4">
+                                        <span
+                                            class="inline-flex items-center rounded-full bg-slate-100 dark:bg-slate-800 px-2 py-0.5 text-[10px] font-medium text-slate-600 dark:text-slate-400">Inactive</span>
+                                    </td>
+                                    <td class="px-4 py-4 text-xs text-slate-500">Sep 28, 2023</td>
+                                    <td class="px-4 py-4 text-right">
+                                        <button class="text-slate-400"><span
+                                                class="material-symbols-outlined text-lg">more_vert</span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-4">
+                                        <div class="flex flex-col">
+                                            <span class="text-sm font-semibold">Jessica Doe</span>
+                                            <span class="text-xs text-slate-500">jess@doe.org</span>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-4">
+                                        <span
+                                            class="inline-flex items-center rounded-full bg-amber-100 dark:bg-amber-900/30 px-2 py-0.5 text-[10px] font-medium text-amber-700 dark:text-amber-400">Pending</span>
+                                    </td>
+                                    <td class="px-4 py-4 text-xs text-slate-500">Sep 25, 2023</td>
+                                    <td class="px-4 py-4 text-right">
+                                        <button class="text-slate-400"><span
+                                                class="material-symbols-outlined text-lg">more_vert</span></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Recent Activity List -->
+                <div class="mt-8">
+                    <h2 class="font-bold text-lg mb-4 px-1">Recent Activity</h2>
+                    <div class="space-y-4">
+                        <div
+                            class="flex items-start gap-3 p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div
+                                class="h-8 w-8 rounded-full bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-blue-500 text-sm">sync</span>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium">System updated to v2.4.0</p>
+                                <p class="text-xs text-slate-500 mt-0.5">2 hours ago</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start gap-3 p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div
+                                class="h-8 w-8 rounded-full bg-emerald-50 dark:bg-emerald-900/20 flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-emerald-500 text-sm">person_add</span>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium">New customer registered: Alex Rivera</p>
+                                <p class="text-xs text-slate-500 mt-0.5">5 hours ago</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start gap-3 p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                            <div
+                                class="h-8 w-8 rounded-full bg-rose-50 dark:bg-rose-900/20 flex items-center justify-center shrink-0">
+                                <span class="material-symbols-outlined text-rose-500 text-sm">error</span>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium">High priority ticket #881 closed</p>
+                                <p class="text-xs text-slate-500 mt-0.5">Yesterday</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Bottom Navigation Bar (iOS / Mobile context) -->
+    <nav
+        class="fixed bottom-0 left-0 right-0 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pb-6 pt-2 z-50">
+        <div class="flex justify-between items-center">
+            <a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+                <span class="material-symbols-outlined">dashboard</span>
+                <p class="text-[10px] font-medium leading-none">Dashboard</p>
+            </a>
+            <a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+                <span class="material-symbols-outlined">group</span>
+                <p class="text-[10px] font-medium leading-none">Customers</p>
+            </a>
+            <a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+                <span class="material-symbols-outlined">receipt_long</span>
+                <p class="text-[10px] font-medium leading-none">Tickets</p>
+            </a>
+            <a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+                <span class="material-symbols-outlined">settings</span>
+                <p class="text-[10px] font-medium leading-none">Settings</p>
+            </a>
+        </div>
+    </nav>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+/**
+ * © 2026 Skyco Web Agency. Alle rechten voorbehouden.
+ * EIGENDOMSRECHT: Dit bronbestand en de daarin vervatte algoritmen, structuren en methodieken zijn het exclusieve intellectuele eigendom van Skyco Web Agency.
+ * GEBRUIKSBEPERKING: Ongeautoriseerde reproductie, kopieergedrag, reverse engineering of distributie van deze code, in welke vorm dan ook, is ten strengste verboden zonder uitdrukkelijke schriftelijke toestemming van Skyco Web Agency.
+ * RECHTSGEVOLGEN: Schending van deze bepalingen zal leiden tot directe civielrechtelijke en strafrechtelijke vervolging conform de Nederlandse auteurswet en internationale verdragen inzake intellectueel eigendom.
+ * KWALIFICATIE: Dit bestand bevat bedrijfsgeheimen en vertrouwelijke informatie van Skyco Web Agency.
+ */
+/* === SKYCO CUSTOM OVERRIDES === */
+
+/* Scroll reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delays for grids */
+.reveal-d1 {
+    transition-delay: 0.1s;
+}
+
+.reveal-d2 {
+    transition-delay: 0.2s;
+}
+
+.reveal-d3 {
+    transition-delay: 0.3s;
+}
+
+.reveal-d4 {
+    transition-delay: 0.4s;
+}
+
+.reveal-d5 {
+    transition-delay: 0.5s;
+}
+
+.reveal-d6 {
+    transition-delay: 0.6s;
+}
+
+/* Language toggle */
+.lang-toggle {
+    display: inline-flex;
+    gap: 2px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+    padding: 2px;
+}
+
+.lang-btn {
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #94a3b8;
+    background: transparent;
+    border: none;
+}
+
+.lang-btn.active {
+    background: #3211d4;
+    color: white;
+}
+
+/* Mobile nav overlay */
+#mobileNav {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(10, 9, 16, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+#mobileNav.open {
+    display: flex;
+}
+
+#mobileNav a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+#mobileNav a:hover {
+    color: #3211d4;
+}
+
+/* Animated spin for loading */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Glow pulse on audit score */
+@keyframes glow-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(50, 17, 212, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 40px rgba(50, 17, 212, 0.6);
+    }
+}
+
+.glow-pulse {
+    animation: glow-pulse 3s ease-in-out infinite;
+}
+
+/* Glass panel helper (in case css not inlined) */
+.glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Hero gradient */
+.hero-gradient {
+    background: radial-gradient(circle at 50% 50%, rgba(50, 17, 212, 0.15) 0%, rgba(13, 12, 22, 1) 70%);
+}
+
+/* Mesh gradient */
+.mesh-gradient {
+    background-image:
+        radial-gradient(at 0% 0%, rgba(50, 17, 212, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(50, 17, 212, 0.15) 0px, transparent 50%);
+}
+
+/* CTA glow */
+.cta-glow {
+    box-shadow: 0 0 20px rgba(50, 17, 212, 0.4);
+}
+
+/* Grid pattern */
+.grid-pattern {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Text glow */
+.text-glow {
+    text-shadow: 0 0 20px rgba(50, 17, 212, 0.4);
+}
+
+/* Dashboard radial gauge */
+.gauge-ring {
+    stroke-dasharray: 282.7;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1.5s ease;
+}
+
+/* Vulnerability card hover */
+.vuln-card {
+    transition: all 0.3s ease;
+}
+
+.vuln-card:hover {
+    border-color: rgba(50, 17, 212, 0.5);
+    transform: translateX(4px);
+}

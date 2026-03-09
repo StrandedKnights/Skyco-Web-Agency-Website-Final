@@ -1,0 +1,440 @@
+<!-- 
+  © 2026 Skyco Web Agency. Alle rechten voorbehouden.
+  EIGENDOMSRECHT: Dit bronbestand en de daarin vervatte algoritmen, structuren en methodieken zijn het exclusieve intellectuele eigendom van Skyco Web Agency.
+  GEBRUIKSBEPERKING: Ongeautoriseerde reproductie, kopieergedrag, reverse engineering of distributie van deze code, in welke vorm dan ook, is ten strengste verboden zonder uitdrukkelijke schriftelijke toestemming van Skyco Web Agency.
+  RECHTSGEVOLGEN: Schending van deze bepalingen zal leiden tot directe civielrechtelijke en strafrechtelijke vervolging conform de Nederlandse auteurswet en internationale verdragen inzake intellectueel eigendom.
+  KWALIFICATIE: Dit bestand bevat bedrijfsgeheimen en vertrouwelijke informatie van Skyco Web Agency.
+-->
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Skyco Web Agency | Professionele Websites & Software op Maat</title>
+    <meta name="description"
+        content="Skyco Web Agency bouwt professionele websites en krachtige software op maat voor moderne bedrijven en ondernemers.">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: { "primary": "#3211d4", "background-light": "#f6f6f8", "background-dark": "#0d0c16", "neutral-glow": "rgba(50, 17, 212, 0.15)" },
+                    fontFamily: { "display": ["Manrope", "sans-serif"] },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <script src="js/protection.js"></script>
+    <!-- Vercel Insights & Speed Insights -->
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-white">
+    <div class="relative min-h-screen overflow-x-hidden">
+
+        <!-- Navigation Bar -->
+        <nav class="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 py-4 transition-all">
+            <div class="max-w-7xl mx-auto flex items-center justify-between glass rounded-full px-6 md:px-8 py-3">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="assets/skyco_logo_v2.jpg" alt="Skyco Logo"
+                        class="h-10 w-10 rounded-lg object-cover shadow-[0_0_15px_rgba(50,17,212,0.3)]">
+                    <span class="text-xl font-extrabold tracking-tighter uppercase italic">Skyco</span>
+                </a>
+                <div class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html"
+                        data-i18n="nav.home">Home</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html"
+                        data-i18n="nav.about">About</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="portfolio.html"
+                        data-i18n="nav.portfolio">Portfolio</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="niches.html"
+                        data-i18n="nav.niches">Niches</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="intelligence-scan.html"
+                        data-i18n="nav.scan">Intelligence Scan</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="enterprise.html"
+                        data-i18n="nav.enterprise">Enterprise</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="lang-toggle hidden sm:inline-flex">
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="nl">NL</button>
+                    </div>
+                    <a href="contact.html"
+                        class="text-sm font-semibold hover:text-primary transition-colors hidden md:block"
+                        data-i18n="nav.contact">Contact</a>
+                    <a href="aanvraag.html"
+                        class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-full text-sm font-bold transition-all shadow-lg shadow-primary/20"
+                        data-i18n="nav.cta">Launch Console</a>
+                    <button class="md:hidden text-white" id="hamburger"><span
+                            class="material-symbols-outlined">menu</span></button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Nav -->
+        <div id="mobileNav">
+            <button id="mobileClose"
+                class="absolute top-6 right-6 text-white text-3xl bg-transparent border-none cursor-pointer">&times;</button>
+            <div class="lang-toggle mb-8">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="nl">NL</button>
+            </div>
+            <a href="index.html" data-i18n="nav.home">Home</a>
+            <a href="about.html" data-i18n="nav.about">About Us</a>
+            <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
+            <a href="niches.html" data-i18n="nav.niches">Niches</a>
+            <a href="intelligence-scan.html" data-i18n="nav.scan">Intelligence Scan</a>
+            <a href="enterprise.html" data-i18n="nav.enterprise">Enterprise</a>
+            <a href="contact.html" data-i18n="nav.contact">Contact</a>
+            <a href="aanvraag.html" class="bg-primary text-white px-8 py-3 rounded-full font-bold mt-4"
+                data-i18n="nav.cta">Launch Console</a>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="relative pt-32 md:pt-40 pb-20 px-6 overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="assets/hero_bg.png" class="w-full h-full object-cover opacity-30 md:opacity-40"
+                    alt="Background">
+                <div class="absolute inset-0 bg-gradient-to-b from-background-dark via-transparent to-background-dark">
+                </div>
+            </div>
+
+            <div class="absolute top-1/4 -right-20 w-96 h-96 bg-primary/20 blur-[120px] rounded-full"></div>
+            <div class="absolute bottom-1/4 -left-20 w-80 h-80 bg-purple-600/10 blur-[100px] rounded-full"></div>
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+                <div class="flex flex-col gap-8 min-w-0">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest mb-8 self-start">
+                        <span data-i18n="hero.badge">Your Partner for Success</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight text-glow break-words"
+                        style="word-break: break-word;">
+                        <span data-i18n="hero.title1">Your Website,</span> <br />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400"
+                            id="typewriter">Our Expertise</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-400 max-w-xl leading-relaxed" data-i18n="hero.sub">
+                        Discover the power of a website that truly works for your business. From the first design to
+                        launch, we arrange everything down to the last detail. Professional, clear, and completely
+                        hassle-free.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-6 pt-4">
+                        <a href="intelligence-scan.html"
+                            class="group relative px-8 py-4 bg-transparent border border-primary text-white font-bold rounded-lg overflow-hidden shadow-[0_0_20px_rgba(50,17,212,0.3)] transition-all">
+                            <span class="relative z-10" data-i18n="hero.cta1">Initialize Systems Scan</span>
+                            <div
+                                class="absolute inset-0 bg-primary/20 group-hover:bg-primary transition-colors duration-300">
+                            </div>
+                        </a>
+                        <a class="flex items-center gap-2 font-bold text-slate-300 hover:text-white transition-colors"
+                            href="niches.html">
+                            <span data-i18n="hero.cta2">View Our Niches</span>
+                            <span class="material-symbols-outlined text-primary">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative hidden lg:block">
+                    <div
+                        class="absolute -top-10 -left-10 glass p-4 rounded-xl flex flex-col gap-1 border-primary/30 z-20">
+                        <span class="text-[10px] text-slate-500 uppercase font-bold tracking-tighter"
+                            data-i18n="hero.stat.latency">Latency</span>
+                        <div class="flex items-center gap-2">
+                            <span class="text-primary font-mono text-xl">12ms</span>
+                            <span class="material-symbols-outlined text-primary text-sm">bolt</span>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute bottom-20 -right-5 glass p-4 rounded-xl flex flex-col gap-1 border-primary/30 z-20">
+                        <span class="text-[10px] text-slate-500 uppercase font-bold tracking-tighter"
+                            data-i18n="hero.stat.load">System Load</span>
+                        <div class="flex items-center gap-2">
+                            <span class="text-green-500 font-mono text-xl" data-i18n="hero.stat.optimal">Optimal</span>
+                            <span class="material-symbols-outlined text-green-500 text-sm">check_circle</span>
+                        </div>
+                    </div>
+                    <div
+                        class="w-full aspect-square relative glass rounded-3xl overflow-hidden flex items-center justify-center border-primary/10 shadow-[0_0_50px_rgba(50,17,212,0.15)]">
+                        <img src="assets/hero_dashboard.png"
+                            class="absolute inset-0 w-full h-full object-cover opacity-80" alt="Tech Dashboard">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-background-dark/80 via-background-dark/20 to-transparent">
+                        </div>
+                        <div class="absolute inset-0 opacity-10 grid-pattern"></div>
+                        <div class="z-10 text-center absolute bottom-8 left-8 text-left">
+                            <p class="font-mono text-slate-300 text-sm tracking-widest uppercase font-bold"
+                                data-i18n="hero.core">Reliable Systems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marquee -->
+        <div class="py-6 border-y border-white/5 bg-background-dark/50 overflow-hidden">
+            <div
+                class="flex items-center gap-12 opacity-30 grayscale hover:grayscale-0 transition-all overflow-x-hidden whitespace-nowrap">
+                <div class="flex items-center gap-20 animate-[marquee_20s_linear_infinite] shrink-0">
+                    <span class="text-2xl font-black italic tracking-tighter">QUANTUM-X</span>
+                    <span class="text-2xl font-black italic tracking-tighter">NEURALINKED</span>
+                    <span class="text-2xl font-black italic tracking-tighter">VOYAGER.IO</span>
+                    <span class="text-2xl font-black italic tracking-tighter">SILICON_VALLEY</span>
+                    <span class="text-2xl font-black italic tracking-tighter">HYPERION</span>
+                    <span class="text-2xl font-black italic tracking-tighter">APEX_CORE</span>
+                </div>
+                <div class="flex items-center gap-20 animate-[marquee_20s_linear_infinite] shrink-0">
+                    <span class="text-2xl font-black italic tracking-tighter">QUANTUM-X</span>
+                    <span class="text-2xl font-black italic tracking-tighter">NEURALINKED</span>
+                    <span class="text-2xl font-black italic tracking-tighter">VOYAGER.IO</span>
+                    <span class="text-2xl font-black italic tracking-tighter">SILICON_VALLEY</span>
+                    <span class="text-2xl font-black italic tracking-tighter">HYPERION</span>
+                    <span class="text-2xl font-black italic tracking-tighter">APEX_CORE</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Core Capabilities -->
+        <section class="relative py-24 md:py-32 px-6 overflow-hidden" id="services">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="assets/services_bg.png" class="w-full h-full object-cover opacity-20" alt="Tech Background">
+                <div class="absolute inset-0 bg-background-dark/80 backdrop-blur-[2px]"></div>
+                <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background-dark to-transparent"></div>
+                <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background-dark to-transparent">
+                </div>
+            </div>
+
+            <div class="relative max-w-7xl mx-auto z-10">
+                <div class="mb-16 text-center max-w-2xl mx-auto reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="services.title">Our Core Capabilities
+                    </h2>
+                    <p class="text-slate-400" data-i18n="services.sub">Sleek digital architecture powered by
+                        glassmorphic design and high-end engineering for enterprise demands.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div
+                        class="glass p-10 rounded-3xl hover:border-primary/50 transition-all group relative overflow-hidden reveal reveal-d1">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full"></div>
+                        <div
+                            class="text-primary mb-8 bg-primary/10 w-14 h-14 flex items-center justify-center rounded-2xl group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">rocket_launch</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4" data-i18n="services.1.title">Hyper-Scale Infrastructure</h3>
+                        <p class="text-slate-400 leading-relaxed" data-i18n="services.1.desc">Engineered for
+                            zero-latency global performance. Our clusters deploy with elastic precision across any
+                            continent.</p>
+                    </div>
+                    <div
+                        class="glass p-10 rounded-3xl border-primary/30 hover:border-primary/50 transition-all group relative overflow-hidden reveal reveal-d2">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full"></div>
+                        <div
+                            class="text-primary mb-8 bg-primary/10 w-14 h-14 flex items-center justify-center rounded-2xl group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">smart_toy</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4" data-i18n="services.2.title">Autonomous Intelligence</h3>
+                        <p class="text-slate-400 leading-relaxed" data-i18n="services.2.desc">Deeply integrated AI
+                            agents that manage complexity, automate workflows, and predict resource needs before they
+                            happen.</p>
+                    </div>
+                    <div
+                        class="glass p-10 rounded-3xl hover:border-primary/50 transition-all group relative overflow-hidden reveal reveal-d3">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl rounded-full"></div>
+                        <div
+                            class="text-primary mb-8 bg-primary/10 w-14 h-14 flex items-center justify-center rounded-2xl group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">encrypted</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4" data-i18n="services.3.title">Fortified Security</h3>
+                        <p class="text-slate-400 leading-relaxed" data-i18n="services.3.desc">Military-grade encryption
+                            layers as a standard. We protect your architecture with quantum-resistant protocol
+                            foundations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section
+            class="py-24 md:py-32 px-6 bg-gradient-to-b from-background-dark via-background-dark/80 to-background-dark border-t border-white/5 relative">
+            <div class="absolute inset-0 grid-pattern opacity-10"></div>
+            <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[80px]"></div>
+
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="mb-16 text-center max-w-2xl mx-auto reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="testimonials.title">Trusted by Industry
+                        Leaders</h2>
+                    <p class="text-slate-400" data-i18n="testimonials.sub">See what our clients say about our robust
+                        digital solutions and hassle-free approach.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div
+                        class="glass p-10 rounded-3xl hover:border-primary/50 transition-all relative overflow-hidden reveal reveal-d1 border-white/5">
+                        <span
+                            class="material-symbols-outlined absolute top-6 right-6 text-primary/20 text-5xl">water_damage</span>
+                        <div class="flex gap-1 mb-6 text-yellow-500">
+                            <span class="material-symbols-outlined text-lg"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-lg"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-lg"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-lg"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-lg"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-slate-300 italic mb-8 leading-relaxed" data-i18n="test.1.body">"Skyco transformed
+                            our completely outdated platform into a lightning-fast ecosystem. We finally have a system
+                            that supports our growth without technical headaches."</p>
+                        <div class="flex flex-col">
+                            <span class="font-bold text-white tracking-wide" data-i18n="test.1.name">Sarah
+                                Jenkins</span>
+                            <span class="text-xs text-primary font-bold uppercase tracking-widest mt-1"
+                                data-i18n="test.1.role">Operations Director, TechFlow</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="glass p-10 rounded-3xl border-primary/30 hover:border-primary/50 transition-all relative overflow-hidden reveal reveal-d2 shadow-[0_0_40px_rgba(50,17,212,0.1)]">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent"></div>
+                        <span
+                            class="material-symbols-outlined absolute top-6 right-6 text-primary/20 text-5xl">water_damage</span>
+                        <div class="flex gap-1 mb-6 text-yellow-500 relative z-10">
+                            <span class="material-symbols-outlined text-lg"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-lg"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-lg"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-lg"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-lg"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-slate-300 italic mb-8 leading-relaxed relative z-10" data-i18n="test.2.body">"The
+                            clarity and speed of communication was amazing. They don't just build a website; they think
+                            along with your business goals and deliver beyond expectations."</p>
+                        <div class="flex flex-col relative z-10">
+                            <span class="font-bold text-white tracking-wide" data-i18n="test.2.name">Mark de
+                                Vries</span>
+                            <span class="text-xs text-primary font-bold uppercase tracking-widest mt-1"
+                                data-i18n="test.2.role">Founder, InnovateRetail</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="glass p-10 rounded-3xl hover:border-primary/50 transition-all relative overflow-hidden reveal reveal-d3 border-white/5">
+                        <span
+                            class="material-symbols-outlined absolute top-6 right-6 text-primary/20 text-5xl">water_damage</span>
+                        <div class="flex gap-1 mb-6 text-yellow-500">
+                            <span class="material-symbols-outlined text-lg"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-lg"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-lg"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-lg"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-lg"
+                                style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-slate-300 italic mb-8 leading-relaxed" data-i18n="test.3.body">"Finally a web
+                            agency that doesn't hide behind technical jargon. Clear arrangements, tight deadlines, and
+                            an end result that perfectly matches our vision."</p>
+                        <div class="flex flex-col">
+                            <span class="font-bold text-white tracking-wide" data-i18n="test.3.name">Elena
+                                Rodriguez</span>
+                            <span class="text-xs text-primary font-bold uppercase tracking-widest mt-1"
+                                data-i18n="test.3.role">CEO, NexaGroup</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-24 md:py-32 px-6">
+            <div
+                class="max-w-7xl mx-auto glass rounded-[2rem] md:rounded-[3rem] p-10 md:p-24 text-center relative overflow-hidden border-primary/20 reveal">
+                <div
+                    class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent">
+                </div>
+                <div class="relative z-10">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-8" data-i18n="cta.title">Ready to Scale
+                        the Future?</h2>
+                    <p class="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto" data-i18n="cta.sub">Connect
+                        with our systems architects to map out your digital dominance strategy.</p>
+                    <a href="contact.html"
+                        class="inline-block bg-primary hover:bg-white hover:text-primary text-white px-10 md:px-12 py-4 md:py-5 rounded-xl text-lg font-black transition-all shadow-2xl shadow-primary/40"
+                        data-i18n="cta.btn">Initiate Consultation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="pt-20 pb-12 px-6 border-t border-white/5">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-16">
+                    <div class="flex flex-col gap-4">
+                        <a href="index.html" class="flex items-center gap-3">
+                            <img src="assets/skyco_logo_v2.jpg" alt="Skyco Logo"
+                                class="h-12 w-12 rounded-lg object-cover">
+                            <span class="text-2xl font-black tracking-tighter uppercase italic">Skyco</span>
+                        </a>
+                        <p class="text-slate-500 max-w-xs text-sm" data-i18n="footer.about">Empowering industrial-scale
+                            digital entities through precision engineering.</p>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-12 md:gap-16">
+                        <div class="flex flex-col gap-4">
+                            <h4 class="text-xs uppercase font-bold tracking-widest text-slate-600"
+                                data-i18n="footer.company">Company</h4>
+                            <a class="text-sm text-slate-400 hover:text-primary" href="niches.html"
+                                data-i18n="nav.niches">Niches</a>
+                            <a class="text-sm text-slate-400 hover:text-primary" href="enterprise.html"
+                                data-i18n="footer.enterprise_link">Enterprise</a>
+                            <a class="text-sm text-slate-400 hover:text-primary" href="contact.html"
+                                data-i18n="nav.contact">Contact</a>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <h4 class="text-xs uppercase font-bold tracking-widest text-slate-600"
+                                data-i18n="footer.community">Community</h4>
+                            <a class="text-sm text-slate-400 hover:text-primary" href="#">Twitter</a>
+                            <a class="text-sm text-slate-400 hover:text-primary" href="#">GitHub</a>
+                            <a class="text-sm text-slate-400 hover:text-primary" href="#">Discord</a>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <h4 class="text-xs uppercase font-bold tracking-widest text-slate-600"
+                                data-i18n="footer.legal">Legal</h4>
+                            <a class="text-sm text-slate-400 hover:text-primary" href="privacy.html"
+                                data-i18n="footer.privacy">Privacy Policy</a>
+                            <a class="text-sm text-slate-400 hover:text-primary" href="terms.html"
+                                data-i18n="footer.terms">Terms of Service</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-white/5 gap-6">
+                    <p class="text-slate-600 text-sm" data-i18n="footer.copy">© 2026 Skyco Web Agency. All systems
+                        operational.</p>
+                    <div class="flex gap-8">
+                        <span class="text-[10px] text-slate-700 font-mono">ENCRYPTED DATA FLOW ENABLED</span>
+                        <span class="text-[10px] text-slate-700 font-mono">PROTOCOL V.4.2.0</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

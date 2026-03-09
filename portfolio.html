@@ -1,0 +1,688 @@
+<!-- 
+  © 2026 Skyco Web Agency. Alle rechten voorbehouden.
+  EIGENDOMSRECHT: Dit bronbestand en de daarin vervatte algoritmen, structuren en methodieken zijn het exclusieve intellectuele eigendom van Skyco Web Agency.
+  GEBRUIKSBEPERKING: Ongeautoriseerde reproductie, kopieergedrag, reverse engineering of distributie van deze code, in welke vorm dan ook, is ten strengste verboden zonder uitdrukkelijke schriftelijke toestemming van Skyco Web Agency.
+  RECHTSGEVOLGEN: Schending van deze bepalingen zal leiden tot directe civielrechtelijke en strafrechtelijke vervolging conform de Nederlandse auteurswet en internationale verdragen inzake intellectueel eigendom.
+  KWALIFICATIE: Dit bestand bevat bedrijfsgeheimen en vertrouwelijke informatie van Skyco Web Agency.
+-->
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portfolio | Skyco Web Agency</title>
+    <meta name="description"
+        content="Ons Portfolio - Bekijk de hoogwaardige digitale oplossingen en software architectuur van Skyco Web Agency.">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="css/custom.css" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: { "primary": "#3211d4", "background-light": "#f6f6f8", "background-dark": "#0d0c16", "neutral-glow": "rgba(50, 17, 212, 0.15)" },
+                    fontFamily: { "display": ["Manrope", "sans-serif"] },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <script src="js/protection.js"></script>
+    <!-- Vercel Insights & Speed Insights -->
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-white">
+    <div class="relative min-h-screen overflow-x-hidden">
+        <!-- Navigation Bar -->
+        <nav class="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 py-4 transition-all">
+            <div class="max-w-7xl mx-auto flex items-center justify-between glass rounded-full px-6 md:px-8 py-3">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="assets/skyco_logo_v2.jpg" alt="Skyco Logo"
+                        class="h-10 w-10 rounded-lg object-cover shadow-[0_0_15px_rgba(50,17,212,0.3)]">
+                    <span class="text-xl font-extrabold tracking-tighter uppercase italic">Skyco</span>
+                </a>
+                <div class="hidden md:flex items-center gap-10">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html"
+                        data-i18n="nav.home">Home</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html"
+                        data-i18n="nav.about">About</a>
+                    <a class="text-sm font-medium text-primary" href="portfolio.html"
+                        data-i18n="nav.portfolio">Portfolio</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="niches.html"
+                        data-i18n="nav.niches">Niches</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="intelligence-scan.html"
+                        data-i18n="nav.scan">Intelligence Scan</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="enterprise.html"
+                        data-i18n="nav.enterprise">Enterprise</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="lang-toggle hidden sm:inline-flex">
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="nl">NL</button>
+                    </div>
+                    <a href="contact.html"
+                        class="text-sm font-semibold hover:text-primary transition-colors hidden md:block"
+                        data-i18n="nav.contact">Contact</a>
+                    <a href="aanvraag.html"
+                        class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-full text-sm font-bold transition-all shadow-lg shadow-primary/20"
+                        data-i18n="nav.cta">Launch Console</a>
+                    <button class="md:hidden text-white" id="hamburger"><span
+                            class="material-symbols-outlined">menu</span></button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Nav -->
+        <div id="mobileNav">
+            <button id="mobileClose"
+                class="absolute top-6 right-6 text-white text-3xl bg-transparent border-none cursor-pointer">&times;</button>
+            <div class="lang-toggle mb-8">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="nl">NL</button>
+            </div>
+            <a href="index.html" data-i18n="nav.home">Home</a>
+            <a href="about.html" data-i18n="nav.about">About Us</a>
+            <a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a>
+            <a href="niches.html" data-i18n="nav.niches">Niches</a>
+            <a href="intelligence-scan.html" data-i18n="nav.scan">Intelligence Scan</a>
+            <a href="enterprise.html" data-i18n="nav.enterprise">Enterprise</a>
+            <a href="contact.html" data-i18n="nav.contact">Contact</a>
+            <a href="aanvraag.html" class="bg-primary text-white px-8 py-3 rounded-full font-bold mt-4"
+                data-i18n="nav.cta">Launch Console</a>
+        </div>
+
+        <!-- Hero -->
+        <section class="pt-32 md:pt-40 pb-16 px-6 hero-gradient relative overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-10">
+                <img src="assets/services_bg.png" class="w-full h-full object-cover mix-blend-screen"
+                    alt="Portfolio background">
+                <div
+                    class="absolute inset-0 bg-gradient-to-b from-background-dark/50 via-transparent to-background-dark">
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto text-center reveal relative z-10">
+                <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-4" data-i18n="portfolio.title">Our
+                    Portfolio</h1>
+                <p class="text-lg text-slate-400 max-w-2xl mx-auto" data-i18n="portfolio.sub">A showcase of high-end
+                    digital solutions and architectural excellence.</p>
+            </div>
+        </section>
+
+        <!-- Portfolio Grid -->
+        <section class="pb-32 px-6">
+            <div class="max-w-7xl mx-auto space-y-24">
+
+                <!-- Project: Vault Dashboard -->
+                <div class="reveal">
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+                        <div class="lg:col-span-2 space-y-6">
+                            <div
+                                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
+                                Financial Technology
+                            </div>
+                            <h2 class="text-3xl md:text-4xl font-black" data-i18n="portfolio.project.vault.title">Vault
+                                Financial Dashboard</h2>
+                            <p class="text-slate-400 text-lg leading-relaxed" data-i18n="portfolio.project.vault.desc">
+                                A premium, secure asset management interface with real-time data flows. Designed for
+                                institutional-grade reliability and lightning-fast user interactions.
+                            </p>
+                            <div class="flex flex-wrap gap-3 pt-4">
+                                <span
+                                    class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-semibold">Real-time
+                                    Data</span>
+                                <span
+                                    class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-semibold">Glassmorphism
+                                    UI</span>
+                                <span
+                                    class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-semibold">Asset
+                                    Security</span>
+                            </div>
+                            <div class="pt-8">
+                                <a href="projects/vault_dashboard.html"
+                                    class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-xl shadow-primary/20 group">
+                                    <span data-i18n="portfolio.view">View Project</span>
+                                    <span
+                                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-3">
+                            <!-- Browser Mockup -->
+                            <div class="relative group">
+                                <div
+                                    class="absolute -inset-1 bg-gradient-to-r from-primary/50 to-purple-500/50 rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
+                                </div>
+                                <div
+                                    class="relative bg-background-dark border border-white/10 rounded-[2rem] overflow-hidden shadow-2xl">
+                                    <!-- Browser Header -->
+                                    <div class="bg-white/5 border-b border-white/10 px-6 py-4 flex items-center gap-4">
+                                        <div class="flex gap-1.5">
+                                            <div class="w-3 h-3 rounded-full bg-red-400/50"></div>
+                                            <div class="w-3 h-3 rounded-full bg-yellow-400/50"></div>
+                                            <div class="w-3 h-3 rounded-full bg-green-400/50"></div>
+                                        </div>
+                                        <div class="flex-1 bg-white/5 rounded-full py-1.5 px-4 flex items-center gap-2">
+                                            <span
+                                                class="material-symbols-outlined text-[14px] text-slate-500">lock</span>
+                                            <span
+                                                class="text-[12px] text-slate-400 font-medium">skyco.agency/vault-dashboard</span>
+                                        </div>
+                                    </div>
+                                    <!-- Iframe Wrapper -->
+                                    <div class="aspect-[16/10] bg-background-dark">
+                                        <iframe src="projects/vault_dashboard.html"
+                                            title="Vault Financial Dashboard Preview"
+                                            class="w-full h-full border-none pointer-events-none scale-[0.85] origin-top"
+                                            scrolling="no"></iframe>
+                                    </div>
+                                    <!-- Overlay to prevent interaction in the small preview -->
+                                    <div class="absolute inset-0 bg-transparent cursor-pointer"
+                                        onclick="window.location.href='projects/vault_dashboard.html'"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Stride Fitness Tracker -->
+                <div class="reveal">
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+                        <div class="lg:col-span-2 space-y-6 lg:order-2">
+                            <div
+                                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
+                                Health & Fitness
+                            </div>
+                            <h2 class="text-3xl md:text-4xl font-black" data-i18n="portfolio.project.stride.title">
+                                Stride Fitness Tracker</h2>
+                            <p class="text-slate-400 text-lg leading-relaxed" data-i18n="portfolio.project.stride.desc">
+                                A high-performance health tracking application designed for urban athletes. Features
+                                advanced biometrics and route optimization.
+                            </p>
+                            <div class="flex flex-wrap gap-3 pt-4">
+                                <span
+                                    class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-semibold">Biometrics</span>
+                                <span
+                                    class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-semibold">Mobile
+                                    App</span>
+                                <span
+                                    class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-semibold">User
+                                    Experience</span>
+                            </div>
+                            <div class="pt-8">
+                                <a href="projects/stride_app.html"
+                                    class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-xl shadow-primary/20 group">
+                                    <span data-i18n="portfolio.view">View Project</span>
+                                    <span
+                                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-3 lg:order-1">
+                            <div class="relative group">
+                                <div
+                                    class="absolute -inset-1 bg-gradient-to-r from-primary/50 to-emerald-500/50 rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
+                                </div>
+                                <div
+                                    class="relative bg-background-dark border border-white/10 rounded-[2rem] overflow-hidden shadow-2xl">
+                                    <div class="bg-white/5 border-b border-white/10 px-6 py-4 flex items-center gap-4">
+                                        <div class="flex gap-1.5">
+                                            <div class="w-3 h-3 rounded-full bg-red-400/50"></div>
+                                            <div class="w-3 h-3 rounded-full bg-yellow-400/50"></div>
+                                            <div class="w-3 h-3 rounded-full bg-green-400/50"></div>
+                                        </div>
+                                        <div class="flex-1 bg-white/5 rounded-full py-1.5 px-4 flex items-center gap-2">
+                                            <span
+                                                class="material-symbols-outlined text-[14px] text-slate-500">lock</span>
+                                            <span
+                                                class="text-[12px] text-slate-400 font-medium">skyco.agency/stride-tracker</span>
+                                        </div>
+                                    </div>
+                                    <div class="aspect-[16/10] bg-background-dark overflow-hidden">
+                                        <iframe src="projects/stride_app.html" title="Stride Fitness Tracker Preview"
+                                            class="w-full h-[150%] border-none pointer-events-none scale-[0.8] origin-top"
+                                            scrolling="no"></iframe>
+                                    </div>
+                                    <div class="absolute inset-0 bg-transparent cursor-pointer"
+                                        onclick="window.location.href='projects/stride_app.html'"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Zenith Fintech Hub -->
+                <div class="reveal">
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+                        <div class="lg:col-span-2 space-y-6">
+                            <div
+                                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
+                                Fintech
+                            </div>
+                            <h2 class="text-3xl md:text-4xl font-black" data-i18n="portfolio.project.zenith.title">
+                                Zenith Fintech Hub</h2>
+                            <p class="text-slate-400 text-lg leading-relaxed" data-i18n="portfolio.project.zenith.desc">
+                                A comprehensive financial ecosystem for modern banking and asset management.
+                            </p>
+                            <div class="flex flex-wrap gap-3 pt-4">
+                                <span
+                                    class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-semibold">Financial
+                                    Infra</span>
+                                <span
+                                    class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-semibold">Security</span>
+                            </div>
+                            <div class="pt-8">
+                                <a href="projects/zenith_fintech.html"
+                                    class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-xl shadow-primary/20 group">
+                                    <span data-i18n="portfolio.view">View Project</span>
+                                    <span
+                                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-3">
+                            <div class="relative group">
+                                <div
+                                    class="absolute -inset-1 bg-gradient-to-r from-primary/50 to-blue-500/50 rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
+                                </div>
+                                <div
+                                    class="relative bg-background-dark border border-white/10 rounded-[2rem] overflow-hidden shadow-2xl">
+                                    <div class="bg-white/5 border-b border-white/10 px-6 py-4 flex items-center gap-4">
+                                        <div class="flex gap-1.5">
+                                            <div class="w-3 h-3 rounded-full bg-red-400/50"></div>
+                                            <div class="w-3 h-3 rounded-full bg-yellow-400/50"></div>
+                                            <div class="w-3 h-3 rounded-full bg-green-400/50"></div>
+                                        </div>
+                                        <div class="flex-1 bg-white/5 rounded-full py-1.5 px-4 flex items-center gap-2">
+                                            <span
+                                                class="material-symbols-outlined text-[14px] text-slate-500">lock</span>
+                                            <span
+                                                class="text-[12px] text-slate-400 font-medium">skyco.agency/zenith-fintech</span>
+                                        </div>
+                                    </div>
+                                    <div class="aspect-[16/10] bg-background-dark">
+                                        <iframe src="projects/zenith_fintech.html" title="Zenith Fintech Hub Preview"
+                                            class="w-full h-full border-none pointer-events-none scale-[0.85] origin-top"
+                                            scrolling="no"></iframe>
+                                    </div>
+                                    <div class="absolute inset-0 bg-transparent cursor-pointer"
+                                        onclick="window.location.href='projects/zenith_fintech.html'"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Aether Real Estate -->
+                <div class="reveal">
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+                        <div class="lg:col-span-2 space-y-6 lg:order-2">
+                            <div
+                                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
+                                Real Estate
+                            </div>
+                            <h2 class="text-3xl md:text-4xl font-black" data-i18n="portfolio.project.aether.title">
+                                Aether Real Estate</h2>
+                            <p class="text-slate-400 text-lg leading-relaxed" data-i18n="portfolio.project.aether.desc">
+                                A premium property management platform with immersive 3D walkthroughs.
+                            </p>
+                            <div class="flex flex-wrap gap-3 pt-4">
+                                <span
+                                    class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-semibold">3D
+                                    Tours</span>
+                                <span
+                                    class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-semibold">Property
+                                    Management</span>
+                            </div>
+                            <div class="pt-8">
+                                <a href="projects/aether_realestate.html"
+                                    class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-xl shadow-primary/20 group">
+                                    <span data-i18n="portfolio.view">View Project</span>
+                                    <span
+                                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-3 lg:order-1">
+                            <div class="relative group">
+                                <div
+                                    class="absolute -inset-1 bg-gradient-to-r from-primary/50 to-emerald-500/50 rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
+                                </div>
+                                <div
+                                    class="relative bg-background-dark border border-white/10 rounded-[2rem] overflow-hidden shadow-2xl">
+                                    <div class="bg-white/5 border-b border-white/10 px-6 py-4 flex items-center gap-4">
+                                        <div class="flex gap-1.5">
+                                            <div class="w-3 h-3 rounded-full bg-red-400/50"></div>
+                                            <div class="w-3 h-3 rounded-full bg-yellow-400/50"></div>
+                                            <div class="w-3 h-3 rounded-full bg-green-400/50"></div>
+                                        </div>
+                                        <div class="flex-1 bg-white/5 rounded-full py-1.5 px-4 flex items-center gap-2">
+                                            <span
+                                                class="material-symbols-outlined text-[14px] text-slate-500">lock</span>
+                                            <span
+                                                class="text-[12px] text-slate-400 font-medium">skyco.agency/aether-realestate</span>
+                                        </div>
+                                    </div>
+                                    <div class="aspect-[16/10] bg-background-dark">
+                                        <iframe src="projects/aether_realestate.html" title="Aether Real Estate Preview"
+                                            class="w-full h-full border-none pointer-events-none scale-[0.85] origin-top"
+                                            scrolling="no"></iframe>
+                                    </div>
+                                    <div class="absolute inset-0 bg-transparent cursor-pointer"
+                                        onclick="window.location.href='projects/aether_realestate.html'"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Insight Analytics -->
+                <div class="reveal">
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+                        <div class="lg:col-span-2 space-y-6">
+                            <div
+                                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
+                                Data & AI
+                            </div>
+                            <h2 class="text-3xl md:text-4xl font-black" data-i18n="portfolio.project.insight.title">
+                                Insight Analytics</h2>
+                            <p class="text-slate-400 text-lg leading-relaxed"
+                                data-i18n="portfolio.project.insight.desc">
+                                Advanced data visualization dashboard with neural predictive modeling.
+                            </p>
+                            <div class="flex flex-wrap gap-3 pt-4">
+                                <span
+                                    class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-semibold">Analytics</span>
+                                <span
+                                    class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-semibold">AI
+                                    Modeling</span>
+                            </div>
+                            <div class="pt-8">
+                                <a href="projects/insight_analytics.html"
+                                    class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-xl shadow-primary/20 group">
+                                    <span data-i18n="portfolio.view">View Project</span>
+                                    <span
+                                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-3">
+                            <div class="relative group">
+                                <div
+                                    class="absolute -inset-1 bg-gradient-to-r from-primary/50 to-amber-500/50 rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
+                                </div>
+                                <div
+                                    class="relative bg-background-dark border border-white/10 rounded-[2rem] overflow-hidden shadow-2xl">
+                                    <div class="bg-white/5 border-b border-white/10 px-6 py-4 flex items-center gap-4">
+                                        <div class="flex gap-1.5">
+                                            <div class="w-3 h-3 rounded-full bg-red-400/50"></div>
+                                            <div class="w-3 h-3 rounded-full bg-yellow-400/50"></div>
+                                            <div class="w-3 h-3 rounded-full bg-green-400/50"></div>
+                                        </div>
+                                        <div class="flex-1 bg-white/5 rounded-full py-1.5 px-4 flex items-center gap-2">
+                                            <span
+                                                class="material-symbols-outlined text-[14px] text-slate-500">lock</span>
+                                            <span
+                                                class="text-[12px] text-slate-400 font-medium">skyco.agency/insight-analytics</span>
+                                        </div>
+                                    </div>
+                                    <div class="aspect-[16/10] bg-background-dark">
+                                        <iframe src="projects/insight_analytics.html" title="Insight Analytics Preview"
+                                            class="w-full h-full border-none pointer-events-none scale-[0.85] origin-top"
+                                            scrolling="no"></iframe>
+                                    </div>
+                                    <div class="absolute inset-0 bg-transparent cursor-pointer"
+                                        onclick="window.location.href='projects/insight_analytics.html'"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Nexus CRM -->
+                <div class="reveal">
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+                        <div class="lg:col-span-2 space-y-6 lg:order-2">
+                            <div
+                                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
+                                Enterprise
+                            </div>
+                            <h2 class="text-3xl md:text-4xl font-black" data-i18n="portfolio.project.nexus.title">Nexus
+                                CRM</h2>
+                            <p class="text-slate-400 text-lg leading-relaxed" data-i18n="portfolio.project.nexus.desc">
+                                An autonomous customer relationship suite focused on rapid scaling.
+                            </p>
+                            <div class="flex flex-wrap gap-3 pt-4">
+                                <span
+                                    class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-semibold">CRM
+                                    Suite</span>
+                                <span
+                                    class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-semibold">Automation</span>
+                            </div>
+                            <div class="pt-8">
+                                <a href="projects/nexus_crm.html"
+                                    class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-xl shadow-primary/20 group">
+                                    <span data-i18n="portfolio.view">View Project</span>
+                                    <span
+                                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-3 lg:order-1">
+                            <div class="relative group">
+                                <div
+                                    class="absolute -inset-1 bg-gradient-to-r from-primary/50 to-indigo-500/50 rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
+                                </div>
+                                <div
+                                    class="relative bg-background-dark border border-white/10 rounded-[2rem] overflow-hidden shadow-2xl">
+                                    <div class="bg-white/5 border-b border-white/10 px-6 py-4 flex items-center gap-4">
+                                        <div class="flex gap-1.5">
+                                            <div class="w-3 h-3 rounded-full bg-red-400/50"></div>
+                                            <div class="w-3 h-3 rounded-full bg-yellow-400/50"></div>
+                                            <div class="w-3 h-3 rounded-full bg-green-400/50"></div>
+                                        </div>
+                                        <div class="flex-1 bg-white/5 rounded-full py-1.5 px-4 flex items-center gap-2">
+                                            <span
+                                                class="material-symbols-outlined text-[14px] text-slate-500">lock</span>
+                                            <span
+                                                class="text-[12px] text-slate-400 font-medium">skyco.agency/nexus-crm</span>
+                                        </div>
+                                    </div>
+                                    <div class="aspect-[16/10] bg-background-dark">
+                                        <iframe src="projects/nexus_crm.html" title="Nexus CRM Preview"
+                                            class="w-full h-full border-none pointer-events-none scale-[0.85] origin-top"
+                                            scrolling="no"></iframe>
+                                    </div>
+                                    <div class="absolute inset-0 bg-transparent cursor-pointer"
+                                        onclick="window.location.href='projects/nexus_crm.html'"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Vanguard Security -->
+                <div class="reveal">
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+                        <div class="lg:col-span-2 space-y-6">
+                            <div
+                                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
+                                Cybersecurity
+                            </div>
+                            <h2 class="text-3xl md:text-4xl font-black" data-i18n="portfolio.project.vanguard.title">
+                                Vanguard Security</h2>
+                            <p class="text-slate-400 text-lg leading-relaxed"
+                                data-i18n="portfolio.project.vanguard.desc">
+                                Military-grade cybersecurity monitoring and threat detection system.
+                            </p>
+                            <div class="flex flex-wrap gap-3 pt-4">
+                                <span
+                                    class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-semibold">Security
+                                    Audits</span>
+                                <span
+                                    class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-semibold">Monitoring</span>
+                            </div>
+                            <div class="pt-8">
+                                <a href="projects/vanguard_security.html"
+                                    class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-xl shadow-primary/20 group">
+                                    <span data-i18n="portfolio.view">View Project</span>
+                                    <span
+                                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-3">
+                            <div class="relative group">
+                                <div
+                                    class="absolute -inset-1 bg-gradient-to-r from-primary/50 to-red-500/50 rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
+                                </div>
+                                <div
+                                    class="relative bg-background-dark border border-white/10 rounded-[2rem] overflow-hidden shadow-2xl">
+                                    <div class="bg-white/5 border-b border-white/10 px-6 py-4 flex items-center gap-4">
+                                        <div class="flex gap-1.5">
+                                            <div class="w-3 h-3 rounded-full bg-red-400/50"></div>
+                                            <div class="w-3 h-3 rounded-full bg-yellow-400/50"></div>
+                                            <div class="w-3 h-3 rounded-full bg-green-400/50"></div>
+                                        </div>
+                                        <div class="flex-1 bg-white/5 rounded-full py-1.5 px-4 flex items-center gap-2">
+                                            <span
+                                                class="material-symbols-outlined text-[14px] text-slate-500">lock</span>
+                                            <span
+                                                class="text-[12px] text-slate-400 font-medium">skyco.agency/vanguard-security</span>
+                                        </div>
+                                    </div>
+                                    <div class="aspect-[16/10] bg-background-dark">
+                                        <iframe src="projects/vanguard_security.html" title="Vanguard Security Preview"
+                                            class="w-full h-full border-none pointer-events-none scale-[0.85] origin-top"
+                                            scrolling="no"></iframe>
+                                    </div>
+                                    <div class="absolute inset-0 bg-transparent cursor-pointer"
+                                        onclick="window.location.href='projects/vanguard_security.html'"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project: Core Documentation -->
+                <div class="reveal">
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+                        <div class="lg:col-span-2 space-y-6 lg:order-2">
+                            <div
+                                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
+                                Documentation
+                            </div>
+                            <h2 class="text-3xl md:text-4xl font-black" data-i18n="portfolio.project.core.title">Core
+                                Documentation</h2>
+                            <p class="text-slate-400 text-lg leading-relaxed" data-i18n="portfolio.project.core.desc">
+                                High-speed technical documentation engine for complex industrial systems.
+                            </p>
+                            <div class="flex flex-wrap gap-3 pt-4">
+                                <span
+                                    class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-semibold">Docs
+                                    Engine</span>
+                                <span
+                                    class="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full text-xs font-semibold">Technical
+                                    Writing</span>
+                            </div>
+                            <div class="pt-8">
+                                <a href="projects/core_docs.html"
+                                    class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold transition-all shadow-xl shadow-primary/20 group">
+                                    <span data-i18n="portfolio.view">View Project</span>
+                                    <span
+                                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:col-span-3 lg:order-1">
+                            <div class="relative group">
+                                <div
+                                    class="absolute -inset-1 bg-gradient-to-r from-primary/50 to-slate-500/50 rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200">
+                                </div>
+                                <div
+                                    class="relative bg-background-dark border border-white/10 rounded-[2rem] overflow-hidden shadow-2xl">
+                                    <div class="bg-white/5 border-b border-white/10 px-6 py-4 flex items-center gap-4">
+                                        <div class="flex gap-1.5">
+                                            <div class="w-3 h-3 rounded-full bg-red-400/50"></div>
+                                            <div class="w-3 h-3 rounded-full bg-yellow-400/50"></div>
+                                            <div class="w-3 h-3 rounded-full bg-green-400/50"></div>
+                                        </div>
+                                        <div class="flex-1 bg-white/5 rounded-full py-1.5 px-4 flex items-center gap-2">
+                                            <span
+                                                class="material-symbols-outlined text-[14px] text-slate-500">lock</span>
+                                            <span
+                                                class="text-[12px] text-slate-400 font-medium">skyco.agency/core-docs</span>
+                                        </div>
+                                    </div>
+                                    <div class="aspect-[16/10] bg-background-dark">
+                                        <iframe src="projects/core_docs.html" title="Core Documentation Preview"
+                                            class="w-full h-full border-none pointer-events-none scale-[0.85] origin-top"
+                                            scrolling="no"></iframe>
+                                    </div>
+                                    <div class="absolute inset-0 bg-transparent cursor-pointer"
+                                        onclick="window.location.href='projects/core_docs.html'"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Future projects can be added here -->
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-background-dark py-20 px-6 border-t border-white/5">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="assets/skyco_logo_v2.jpg" alt="Skyco Logo" class="h-10 w-10 rounded-lg object-cover">
+                        <span class="text-xl font-extrabold tracking-tighter uppercase italic">Skyco</span>
+                    </div>
+                    <p class="text-slate-400 max-w-sm mb-8" data-i18n="footer.about">Empowering industrial-scale digital
+                        entities through precision engineering.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6" data-i18n="footer.company">Company</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li><a href="about.html" class="hover:text-primary transition-colors"
+                                data-i18n="footer.about_link">About</a></li>
+                        <li><a href="portfolio.html" class="hover:text-primary transition-colors"
+                                data-i18n="nav.portfolio">Portfolio</a></li>
+                        <li><a href="enterprise.html" class="hover:text-primary transition-colors"
+                                data-i18n="footer.enterprise_link">Enterprise</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition-colors"
+                                data-i18n="nav.contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6" data-i18n="footer.legal">Legal</h4>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li><a href="privacy.html" class="hover:text-primary transition-colors"
+                                data-i18n="footer.privacy">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-primary transition-colors"
+                                data-i18n="footer.terms">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="max-w-7xl mx-auto pt-20 flex flex-col md:row justify-between items-center gap-6 border-t border-white/5 mt-20">
+                <p class="text-slate-500 text-xs" data-i18n="footer.copy">© 2026 Skyco Web Agency. All systems
+                    operational.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

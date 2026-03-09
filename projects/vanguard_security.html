@@ -1,0 +1,255 @@
+<!-- 
+  © 2026 Skyco Web Agency. Alle rechten voorbehouden.
+  EIGENDOMSRECHT: Dit bronbestand en de daarin vervatte algoritmen, structuren en methodieken zijn het exclusieve intellectuele eigendom van Skyco Web Agency.
+  GEBRUIKSBEPERKING: Ongeautoriseerde reproductie, kopieergedrag, reverse engineering of distributie van deze code, in welke vorm dan ook, is ten strengste verboden zonder uitdrukkelijke schriftelijke toestemming van Skyco Web Agency.
+  RECHTSGEVOLGEN: Schending van deze bepalingen zal leiden tot directe civielrechtelijke en strafrechtelijke vervolging conform de Nederlandse auteurswet en internationale verdragen inzake intellectueel eigendom.
+  KWALIFICATIE: Dit bestand bevat bedrijfsgeheimen en vertrouwelijke informatie van Skyco Web Agency.
+-->
+<html class="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Roboto+Mono:wght@400;500&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f04242",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#0a0505",
+                        "neutral-900": "#1a0d0d",
+                        "neutral-800": "#2a1515",
+                        "neutral-700": "#3d1f1f",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "mono": ["Roboto Mono", "monospace"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <script src="../js/protection.js"></script>
+    <!-- Vercel Insights & Speed Insights -->
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .mono-text {
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+    <script src="../js/protection.js"></script>
+    <!-- Vercel Insights & Speed Insights -->
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+    <!-- Top Navigation Bar -->
+    <header
+        class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/20">
+        <div class="flex items-center justify-between px-4 h-16">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-2xl" data-icon="shield">shield</span>
+                <h1 class="text-lg font-bold tracking-tight uppercase">Vanguard</h1>
+            </div>
+            <button class="p-2 rounded-lg hover:bg-primary/10 transition-colors">
+                <span class="material-symbols-outlined text-slate-100" data-icon="account_circle">account_circle</span>
+            </button>
+        </div>
+        <nav class="flex overflow-x-auto hide-scrollbar px-4 gap-6 border-t border-primary/10">
+            <a class="py-3 text-xs font-bold uppercase tracking-widest text-slate-400 border-b-2 border-transparent"
+                href="#">Dashboard</a>
+            <a class="py-3 text-xs font-bold uppercase tracking-widest text-primary border-b-2 border-primary"
+                href="#">Reports</a>
+            <a class="py-3 text-xs font-bold uppercase tracking-widest text-slate-400 border-b-2 border-transparent"
+                href="#">Assets</a>
+            <a class="py-3 text-xs font-bold uppercase tracking-widest text-slate-400 border-b-2 border-transparent"
+                href="#">Settings</a>
+        </nav>
+    </header>
+    <!-- Main Content Area -->
+    <main class="flex-1 pb-24">
+        <!-- Hero Section: System Health -->
+        <section class="py-10 px-6 flex flex-col items-center justify-center text-center">
+            <div class="relative w-48 h-48 flex items-center justify-center">
+                <!-- Circular Progress Background -->
+                <svg class="w-full h-full transform -rotate-90">
+                    <circle class="text-neutral-800" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor"
+                        stroke-width="6"></circle>
+                    <circle class="text-slate-100" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor"
+                        stroke-dasharray="552.92" stroke-dashoffset="88.47" stroke-width="8"></circle>
+                </svg>
+                <div class="absolute inset-0 flex flex-col items-center justify-center">
+                    <span class="text-4xl font-bold tracking-tighter">84%</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-semibold">Health
+                        Index</span>
+                </div>
+            </div>
+            <div class="mt-8 flex flex-col items-center">
+                <h2 class="text-sm font-bold uppercase tracking-widest text-slate-500 mb-4">Alert Levels</h2>
+                <div class="flex gap-3">
+                    <div class="px-3 py-1 bg-red-500/10 border border-red-500/50 rounded-full flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+                        <span class="text-[10px] font-bold uppercase text-red-500">Critical: 2</span>
+                    </div>
+                    <div
+                        class="px-3 py-1 bg-amber-500/10 border border-amber-500/50 rounded-full flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                        <span class="text-[10px] font-bold uppercase text-amber-500">Warning: 5</span>
+                    </div>
+                    <div
+                        class="px-3 py-1 bg-slate-500/10 border border-slate-500/50 rounded-full flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+                        <span class="text-[10px] font-bold uppercase text-slate-400">Info: 12</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Audit Log Table -->
+        <section class="px-4 mt-4">
+            <div class="flex items-center justify-between mb-4">
+                <h3 class="text-sm font-bold uppercase tracking-widest">Recent Activity</h3>
+                <span class="material-symbols-outlined text-slate-400 text-sm"
+                    data-icon="filter_list">filter_list</span>
+            </div>
+            <div class="space-y-3">
+                <!-- Log Entry 1 -->
+                <div class="bg-neutral-900 border border-primary/10 rounded-xl p-4 shadow-sm">
+                    <div class="flex justify-between items-start mb-2">
+                        <div class="mono-text text-[10px] text-slate-500">2023-11-24 14:22:01</div>
+                        <span
+                            class="px-2 py-0.5 bg-red-500 text-white text-[9px] font-bold uppercase rounded">Critical</span>
+                    </div>
+                    <div class="mb-3">
+                        <p class="text-sm font-semibold text-slate-100">Unauthorized API Access Attempt</p>
+                        <p class="mono-text text-[11px] text-slate-400 mt-1 uppercase">Source: 192.168.1.105</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-[10px] text-red-400 mono-text uppercase">IP_BLOCK_SUCCESS</span>
+                        <button
+                            class="text-[10px] font-bold uppercase tracking-wider text-primary flex items-center gap-1">
+                            Details <span class="material-symbols-outlined text-xs"
+                                data-icon="chevron_right">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Log Entry 2 -->
+                <div class="bg-neutral-900 border border-primary/10 rounded-xl p-4 shadow-sm">
+                    <div class="flex justify-between items-start mb-2">
+                        <div class="mono-text text-[10px] text-slate-500">2023-11-24 13:45:12</div>
+                        <span
+                            class="px-2 py-0.5 bg-amber-500 text-black text-[9px] font-bold uppercase rounded">Warning</span>
+                    </div>
+                    <div class="mb-3">
+                        <p class="text-sm font-semibold text-slate-100">SSL Certificate Expiration</p>
+                        <p class="mono-text text-[11px] text-slate-400 mt-1 uppercase">Domain: prod-api.vanguard.io</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-[10px] text-amber-400 mono-text uppercase">RENEWAL_REQUIRED</span>
+                        <button
+                            class="text-[10px] font-bold uppercase tracking-wider text-primary flex items-center gap-1">
+                            Details <span class="material-symbols-outlined text-xs"
+                                data-icon="chevron_right">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Log Entry 3 -->
+                <div class="bg-neutral-900 border border-primary/10 rounded-xl p-4 shadow-sm">
+                    <div class="flex justify-between items-start mb-2">
+                        <div class="mono-text text-[10px] text-slate-500">2023-11-24 12:10:55</div>
+                        <span
+                            class="px-2 py-0.5 bg-slate-700 text-slate-100 text-[9px] font-bold uppercase rounded">Info</span>
+                    </div>
+                    <div class="mb-3">
+                        <p class="text-sm font-semibold text-slate-100">System Backup Completed</p>
+                        <p class="mono-text text-[11px] text-slate-400 mt-1 uppercase">Storage: AWS-S3-Region-1</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-[10px] text-slate-400 mono-text uppercase">NODE_SYNC_OK</span>
+                        <button
+                            class="text-[10px] font-bold uppercase tracking-wider text-primary flex items-center gap-1">
+                            Details <span class="material-symbols-outlined text-xs"
+                                data-icon="chevron_right">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Log Entry 4 -->
+                <div class="bg-neutral-900 border border-primary/10 rounded-xl p-4 shadow-sm opacity-60">
+                    <div class="flex justify-between items-start mb-2">
+                        <div class="mono-text text-[10px] text-slate-500">2023-11-24 11:30:00</div>
+                        <span
+                            class="px-2 py-0.5 bg-slate-700 text-slate-100 text-[9px] font-bold uppercase rounded">Info</span>
+                    </div>
+                    <div class="mb-3">
+                        <p class="text-sm font-semibold text-slate-100">Network Scan Initiated</p>
+                        <p class="mono-text text-[11px] text-slate-400 mt-1 uppercase">Target: Full Subnet</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-[10px] text-slate-400 mono-text uppercase">SCAN_COMPLETE</span>
+                        <button
+                            class="text-[10px] font-bold uppercase tracking-wider text-primary flex items-center gap-1">
+                            Details <span class="material-symbols-outlined text-xs"
+                                data-icon="chevron_right">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Bottom Navigation Bar -->
+    <footer
+        class="fixed bottom-0 w-full bg-background-light dark:bg-background-dark border-t border-primary/20 pb-safe-area">
+        <div class="flex justify-around items-center h-16">
+            <a class="flex flex-col items-center gap-1 text-primary" href="#">
+                <span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                <span class="text-[10px] font-bold uppercase">Home</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+                <span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+                <span class="text-[10px] font-bold uppercase">Logs</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+                <span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+                <span class="text-[10px] font-bold uppercase">Shield</span>
+            </a>
+            <a class="flex flex-col items-center gap-1 text-slate-500" href="#">
+                <span class="material-symbols-outlined" data-icon="settings">settings</span>
+                <span class="text-[10px] font-bold uppercase">Setup</span>
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
